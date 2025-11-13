@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags for SEO and Responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to my portfolio. I'm a Python developer specializing in web development, automation, and creative solutions.">
+    <meta name="keywords" content="Portfolio, Developer, , Web Development, Python, JavaScript">
+    <meta name="author" content="Ihsan Hadhrami">
+    
+    <!-- Open Graph Tags for Social Sharing -->
+    <meta property="og:title" content="Ihsan Hadhrami - Python Developer | Automation Specialist">
+    <meta property="og:description" content="Welcome to my portfolio. Python developer specializing in automation and workflow optimization. Explore my automation projects and technical expertise.">
+    <meta property="og:image" content="assets/images/og-image.png">
+    <meta property="og:url" content="https://yourusername.github.io">
+    <meta property="og:type" content="website">
+    
+    <title>Ihsan Hadhrami - Python Developer | Automation Specialist</title>
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ocean': {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            900: '#082f49',
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'Poppins', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts: Inter & Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-gradient-to-br from-slate-50 to-slate-100 text-slate-800 font-sans overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-ocean-600 hover:text-ocean-700 transition-colors">
+                IH <!-- Change to your initials -->
+            </a>
+            <ul class="hidden md:flex gap-8">
+                <li><a href="#home" class="text-slate-700 hover:text-ocean-600 transition-colors font-medium">Home</a></li>
+                <li><a href="#about" class="text-slate-700 hover:text-ocean-600 transition-colors font-medium">About</a></li>
+                <li><a href="#experience" class="text-slate-700 hover:text-ocean-600 transition-colors font-medium">Experience</a></li>
+                <li><a href="#projects" class="text-slate-700 hover:text-ocean-600 transition-colors font-medium">Projects</a></li>
+                <li><a href="#contact" class="text-slate-700 hover:text-ocean-600 transition-colors font-medium">Contact</a></li>
+            </ul>
+            <!-- Mobile Menu Toggle -->
+            <button id="menu-toggle" class="md:hidden text-ocean-600 text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200">
+            <ul class="flex flex-col gap-4 p-6">
+                <li><a href="#home" class="text-slate-700 hover:text-ocean-600 transition-colors font-medium">Home</a></li>
+                <li><a href="#about" class="text-slate-700 hover:text-ocean-600 transition-colors font-medium">About</a></li>
+                <li><a href="#experience" class="text-slate-700 hover:text-ocean-600 transition-colors font-medium">Experience</a></li>
+                <li><a href="#projects" class="text-slate-700 hover:text-ocean-600 transition-colors font-medium">Projects</a></li>
+                <li><a href="#contact" class="text-slate-700 hover:text-ocean-600 transition-colors font-medium">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== HOME SECTION ===== -->
+    <section id="home" class="min-h-screen flex items-center justify-center px-6 pt-20">
+        <div class="text-center max-w-3xl mx-auto fade-in-element">
+            <h1 class="text-6xl md:text-7xl font-bold text-slate-900 mb-6 leading-tight">
+                Hi, I'm <span class="text-ocean-600">Ihsan Hadhrami</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-600 mb-8 leading-relaxed">
+                Python developer specializing in automation and workflow optimization. I build efficient solutions that streamline processes and solve complex problems.
+            </p>
+            <div class="flex gap-4 justify-center mb-12">
+                <a href="#projects" class="bg-ocean-600 text-white px-8 py-3 rounded-lg hover:bg-ocean-700 transition-all transform hover:scale-105 font-medium">
+                    View My Work
+                </a>
+                <a href="#contact" class="border-2 border-ocean-600 text-ocean-600 px-8 py-3 rounded-lg hover:bg-ocean-50 transition-colors font-medium">
+                    Get In Touch
+                </a>
+            </div>
+            
+            <!-- Scroll Down Animation -->
+            <div class="flex justify-center mt-16 animate-bounce">
+                <svg class="w-6 h-6 text-ocean-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section id="about" class="py-20 px-6 bg-white">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-12 text-center fade-in-element">
+                About Me
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- About Text -->
+                <div class="fade-in-element">
+                    <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                        I'm a Python developer with a passion for automation and workflow optimization. I specialize in building tools that eliminate repetitive tasks, streamline processes, and increase efficiency. My expertise lies in creating robust automation solutions that solve real business problems.
+                    </p>
+                    <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                        I'm dedicated to writing clean, maintainable code and continuously learning best practices in Python development. When I'm not automating workflows, you'll find me exploring new automation frameworks, contributing to open-source projects, or working on innovative automation solutions.
+                    </p>
+                    
+                    <!-- Skills -->
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-4">Skills & Technologies</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <!-- Customize these skill tags -->
+                            <span class="bg-ocean-50 text-ocean-700 px-4 py-2 rounded-full text-sm font-medium">Python</span>
+                            <span class="bg-ocean-50 text-ocean-700 px-4 py-2 rounded-full text-sm font-medium">Automation</span>
+                            <span class="bg-ocean-50 text-ocean-700 px-4 py-2 rounded-full text-sm font-medium">Workflow Optimization</span>
+                            <span class="bg-ocean-50 text-ocean-700 px-4 py-2 rounded-full text-sm font-medium">Web Scraping</span>
+                            <span class="bg-ocean-50 text-ocean-700 px-4 py-2 rounded-full text-sm font-medium">API Development</span>
+                            <span class="bg-ocean-50 text-ocean-700 px-4 py-2 rounded-full text-sm font-medium">Selenium</span>
+                            <span class="bg-ocean-50 text-ocean-700 px-4 py-2 rounded-full text-sm font-medium">Data Processing</span>
+                            <span class="bg-ocean-50 text-ocean-700 px-4 py-2 rounded-full text-sm font-medium">Task Scheduling</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- About Image -->
+                <div class="fade-in-element">
+                    <div class="aspect-square bg-gradient-to-br from-ocean-200 to-ocean-400 rounded-2xl flex items-center justify-center overflow-hidden">
+                        <img src="assets/images/profile.jpg" alt="Ihsan Hadhrami Profile" class="w-full h-full object-cover rounded-2xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EXPERIENCE SECTION ===== -->
+    <section id="experience" class="py-20 px-6 bg-gradient-to-br from-slate-50 to-slate-100">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-12 text-center fade-in-element">
+                Experience
+            </h2>
+            
+            <div class="space-y-8">
+                <!-- Experience Item 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow fade-in-element border-l-4 border-ocean-600">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-slate-900">Automation Developer</h3>
+                        <span class="text-sm text-ocean-600 font-medium">2022 - Present</span>
+                    </div>
+                    <p class="text-ocean-600 font-semibold mb-3">Tech Company Name</p>
+                    <p class="text-slate-600 leading-relaxed">
+                        Designed and implemented Python automation solutions that eliminated 30+ hours of manual work weekly. Developed workflow optimization tools, web scraping applications, and process automation systems for enterprise clients.
+                    </p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="text-xs bg-ocean-50 text-ocean-700 px-3 py-1 rounded-full">Python</span>
+                        <span class="text-xs bg-ocean-50 text-ocean-700 px-3 py-1 rounded-full">Automation</span>
+                        <span class="text-xs bg-ocean-50 text-ocean-700 px-3 py-1 rounded-full">Selenium</span>
+                    </div>
+                </div>
+                
+                <!-- Experience Item 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow fade-in-element border-l-4 border-ocean-600">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-slate-900">Python Developer</h3>
+                        <span class="text-sm text-ocean-600 font-medium">2020 - 2022</span>
+                    </div>
+                    <p class="text-ocean-600 font-semibold mb-3">Another Tech Company</p>
+                    <p class="text-slate-600 leading-relaxed">
+                        Developed Python applications for data processing and task automation. Built REST APIs, implemented web scraping solutions, and created scheduled task automation frameworks.
+                    </p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="text-xs bg-ocean-50 text-ocean-700 px-3 py-1 rounded-full">Python</span>
+                        <span class="text-xs bg-ocean-50 text-ocean-700 px-3 py-1 rounded-full">Flask</span>
+                        <span class="text-xs bg-ocean-50 text-ocean-700 px-3 py-1 rounded-full">PostgreSQL</span>
+                    </div>
+                </div>
+                
+                <!-- Experience Item 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow fade-in-element border-l-4 border-ocean-600">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-slate-900">Junior Python Developer</h3>
+                        <span class="text-sm text-ocean-600 font-medium">2018 - 2020</span>
+                    </div>
+                    <p class="text-ocean-600 font-semibold mb-3">Startup Name</p>
+                    <p class="text-slate-600 leading-relaxed">
+                        Started my Python development career working on automation tools and scripts. Learned programming best practices, collaborated with experienced developers, and contributed to core automation features.
+                    </p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="text-xs bg-ocean-50 text-ocean-700 px-3 py-1 rounded-full">Python</span>
+                        <span class="text-xs bg-ocean-50 text-ocean-700 px-3 py-1 rounded-full">Web Scraping</span>
+                        <span class="text-xs bg-ocean-50 text-ocean-700 px-3 py-1 rounded-full">Scripting</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CERTIFICATIONS SECTION ===== -->
+    <section id="certifications" class="py-20 px-6 bg-white">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-12 text-center fade-in-element">
+                Certifications
+            </h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Certification Card 1 -->
+                <div class="bg-gradient-to-br from-ocean-50 to-ocean-100 p-8 rounded-xl text-center hover:shadow-lg transition-all transform hover:scale-105 fade-in-element">
+                    <div class="text-5xl mb-4 text-ocean-600">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">AWS Certified Developer</h3>
+                    <p class="text-slate-600 text-sm mb-3">Amazon Web Services</p>
+                    <p class="text-xs text-slate-500">Issued Jan 2023</p>
+                </div>
+                
+                <!-- Certification Card 2 -->
+                <div class="bg-gradient-to-br from-ocean-50 to-ocean-100 p-8 rounded-xl text-center hover:shadow-lg transition-all transform hover:scale-105 fade-in-element">
+                    <div class="text-5xl mb-4 text-ocean-600">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Full Stack Web Development</h3>
+                    <p class="text-slate-600 text-sm mb-3">Coursera</p>
+                    <p class="text-xs text-slate-500">Issued Dec 2022</p>
+                </div>
+                
+                <!-- Certification Card 3 -->
+                <div class="bg-gradient-to-br from-ocean-50 to-ocean-100 p-8 rounded-xl text-center hover:shadow-lg transition-all transform hover:scale-105 fade-in-element">
+                    <div class="text-5xl mb-4 text-ocean-600">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">JavaScript Mastery</h3>
+                    <p class="text-slate-600 text-sm mb-3">Frontend Masters</p>
+                    <p class="text-xs text-slate-500">Issued Nov 2022</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS SECTION ===== -->
+    <section id="projects" class="py-20 px-6 bg-gradient-to-br from-slate-50 to-slate-100">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-12 text-center fade-in-element">
+                Featured Projects
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-10">
+                <!-- Project Card 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all transform hover:scale-105 fade-in-element group">
+                    <div class="aspect-video bg-gradient-to-br from-ocean-300 to-ocean-600 flex items-center justify-center overflow-hidden relative">
+                        <i class="fas fa-code text-white text-6xl opacity-30"></i>
+                        <!-- Replace with actual project image -->
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2">Web Scraping & Data Pipeline</h3>
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            An automated data collection and processing pipeline that scrapes web data, transforms it, and loads it into databases. Handles scheduling, error recovery, and data validation at scale.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-ocean-50 text-ocean-700 px-3 py-1 rounded-full font-medium">Python</span>
+                            <span class="text-xs bg-ocean-50 text-ocean-700 px-3 py-1 rounded-full font-medium">BeautifulSoup</span>
+                            <span class="text-xs bg-ocean-50 text-ocean-700 px-3 py-1 rounded-full font-medium">Selenium</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="#" class="text-ocean-600 hover:text-ocean-700 font-semibold flex items-center gap-2 transition-colors">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="#" class="text-ocean-600 hover:text-ocean-700 font-semibold flex items-center gap-2 transition-colors">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project Card 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all transform hover:scale-105 fade-in-element group">
+                    <div class="aspect-video bg-gradient-to-br from-ocean-300 to-ocean-600 flex items-center justify-center overflow-hidden relative">
+                        <i class="fas fa-tasks text-white text-6xl opacity-30"></i>
+                        <!-- Replace with actual project image -->
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2">Business Process Automation</h3>
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            A comprehensive workflow automation system that streamlines repetitive business processes. Automates document processing, email workflows, and report generation, saving 40+ hours monthly.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-ocean-50 text-ocean-700 px-3 py-1 rounded-full font-medium">Python</span>
+                            <span class="text-xs bg-ocean-50 text-ocean-700 px-3 py-1 rounded-full font-medium">Schedule</span>
+                            <span class="text-xs bg-ocean-50 text-ocean-700 px-3 py-1 rounded-full font-medium">API</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="#" class="text-ocean-600 hover:text-ocean-700 font-semibold flex items-center gap-2 transition-colors">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="#" class="text-ocean-600 hover:text-ocean-700 font-semibold flex items-center gap-2 transition-colors">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project Card 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all transform hover:scale-105 fade-in-element group">
+                    <div class="aspect-video bg-gradient-to-br from-ocean-300 to-ocean-600 flex items-center justify-center overflow-hidden relative">
+                        <i class="fas fa-robot text-white text-6xl opacity-30"></i>
+                        <!-- Replace with actual project image -->
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2">Automated Report Generator</h3>
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            An intelligent report generation system that pulls data from multiple sources, generates formatted reports, and distributes them via email. Supports scheduling and template customization for different departments.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-ocean-50 text-ocean-700 px-3 py-1 rounded-full font-medium">Python</span>
+                            <span class="text-xs bg-ocean-50 text-ocean-700 px-3 py-1 rounded-full font-medium">Jinja2</span>
+                            <span class="text-xs bg-ocean-50 text-ocean-700 px-3 py-1 rounded-full font-medium">Pandas</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="#" class="text-ocean-600 hover:text-ocean-700 font-semibold flex items-center gap-2 transition-colors">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="#" class="text-ocean-600 hover:text-ocean-700 font-semibold flex items-center gap-2 transition-colors">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project Card 4 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all transform hover:scale-105 fade-in-element group">
+                    <div class="aspect-video bg-gradient-to-br from-ocean-300 to-ocean-600 flex items-center justify-center overflow-hidden relative">
+                        <i class="fas fa-chart-bar text-white text-6xl opacity-30"></i>
+                        <!-- Replace with actual project image -->
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2">RPA Solution - Desktop Automation</h3>
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            A robotic process automation tool that handles repetitive desktop tasks including data entry, application interaction, and file management. Reduces manual effort by 90% with intelligent error handling.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-ocean-50 text-ocean-700 px-3 py-1 rounded-full font-medium">Python</span>
+                            <span class="text-xs bg-ocean-50 text-ocean-700 px-3 py-1 rounded-full font-medium">PyAutoGUI</span>
+                            <span class="text-xs bg-ocean-50 text-ocean-700 px-3 py-1 rounded-full font-medium">OCR</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="#" class="text-ocean-600 hover:text-ocean-700 font-semibold flex items-center gap-2 transition-colors">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="#" class="text-ocean-600 hover:text-ocean-700 font-semibold flex items-center gap-2 transition-colors">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section id="contact" class="py-20 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-12 text-center fade-in-element">
+                Get In Touch
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div class="fade-in-element">
+                    <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                        I'm always interested in hearing about new projects and opportunities. Feel free to reach out if you'd like to collaborate or just say hi!
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <!-- Email -->
+                        <div class="flex items-start gap-4">
+                            <div class="text-2xl text-ocean-600 mt-1">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 mb-1">Email</h3>
+                                <a href="mailto:ihadhrami20@gmail.com" class="text-ocean-600 hover:text-ocean-700 transition-colors">
+                                    ihadhrami20@gmail.com
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- LinkedIn -->
+                        <div class="flex items-start gap-4">
+                            <div class="text-2xl text-ocean-600 mt-1">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 mb-1">LinkedIn</h3>
+                                <a href="https://www.linkedin.com/in/ihsan-hadhrami-ab0368287" target="_blank" class="text-ocean-600 hover:text-ocean-700 transition-colors">
+                                    linkedin.com/in/ihsan-hadhrami-ab0368287
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- GitHub -->
+                        <div class="flex items-start gap-4">
+                            <div class="text-2xl text-ocean-600 mt-1">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 mb-1">GitHub</h3>
+                                <a href="https://github.com/ihadhrami20-csar" target="_blank" class="text-ocean-600 hover:text-ocean-700 transition-colors">
+                                    github.com/ihadhrami20-csar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="fade-in-element">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-slate-700 font-medium mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-ocean-600 transition-all" placeholder="John Doe">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-slate-700 font-medium mb-2">Your Email</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-ocean-600 transition-all" placeholder="john@example.com">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-slate-700 font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-ocean-600 transition-all resize-none" placeholder="Your message here..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-ocean-600 text-white py-3 rounded-lg hover:bg-ocean-700 transition-colors font-bold">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-slate-900 text-white py-10 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-slate-400">
+                    © 2024 Ihsan Hadhrami. All rights reserved.
+                </p>
+                
+                <!-- Social Links -->
+                <div class="flex gap-6">
+                    <a href="https://github.com/ihadhrami20-csar" target="_blank" class="text-slate-400 hover:text-ocean-400 transition-colors text-xl">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ihsan-hadhrami-ab0368287" target="_blank" class="text-slate-400 hover:text-ocean-400 transition-colors text-xl">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:ihadhrami20@gmail.com" class="text-slate-400 hover:text-ocean-400 transition-colors text-xl">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="fixed bottom-8 right-8 bg-ocean-600 text-white p-4 rounded-full opacity-0 invisible transition-all transform hover:scale-110 hover:bg-ocean-700 shadow-lg" title="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

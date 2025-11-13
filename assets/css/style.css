@@ -1,0 +1,170 @@
+/* ===== GLOBAL STYLES ===== */
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0284c7;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0369a1;
+}
+
+/* ===== ANIMATIONS ===== */
+
+/* Fade-in animation on scroll */
+.fade-in-element {
+    opacity: 0;
+    animation: fadeInScroll 0.6s ease-in-out forwards;
+}
+
+@keyframes fadeInScroll {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Stagger animation delay for multiple elements */
+.fade-in-element:nth-child(1) { animation-delay: 0.1s; }
+.fade-in-element:nth-child(2) { animation-delay: 0.2s; }
+.fade-in-element:nth-child(3) { animation-delay: 0.3s; }
+.fade-in-element:nth-child(4) { animation-delay: 0.4s; }
+.fade-in-element:nth-child(5) { animation-delay: 0.5s; }
+.fade-in-element:nth-child(6) { animation-delay: 0.6s; }
+
+/* ===== TYPOGRAPHY ===== */
+
+/* Smooth text rendering */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Heading styles */
+h1, h2, h3 {
+    letter-spacing: -0.5px;
+}
+
+/* ===== BUTTONS ===== */
+
+/* Button hover effects */
+button:active {
+    transform: scale(0.98);
+}
+
+/* ===== LINKS ===== */
+
+/* Link focus states for accessibility */
+a:focus-visible {
+    outline: 2px solid #0284c7;
+    outline-offset: 2px;
+}
+
+/* ===== FORM ELEMENTS ===== */
+
+/* Input and textarea focus states */
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Prevents zoom on mobile input focus */
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+/* ===== UTILITIES ===== */
+
+/* Smooth transition utility */
+.transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+
+/* Shadow effects */
+.shadow-glow {
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.2);
+}
+
+/* Gradient text */
+.gradient-text {
+    background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Backdrop blur for navbar */
+@supports (backdrop-filter: blur(1px)) {
+    .backdrop-blur-md {
+        backdrop-filter: blur(12px);
+    }
+}
+
+/* Animation for experience cards on hover */
+.experience-card {
+    transition: all 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Project card hover effect */
+.project-card {
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Print styles */
+@media print {
+    nav,
+    footer,
+    #scroll-to-top {
+        display: none;
+    }
+}

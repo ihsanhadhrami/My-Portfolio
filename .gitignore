@@ -1,0 +1,54 @@
+# OS Files
+.DS_Store
+Thumbs.db
+.env.local
+
+# IDE/Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.sublime-project
+.sublime-workspace
+
+# Node (if using npm packages in future)
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# Build/Dist
+dist/
+build/
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+.cache/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE specific
+*.iml
+.project
+.classpath
+
+# Python (if adding backend later)
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+env/
+
+# Images (optional - uncomment if storing originals separately)
+# assets/images/original/
+# *.psd
+# *.ai
