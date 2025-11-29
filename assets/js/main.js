@@ -244,48 +244,96 @@ if (!document.querySelector('.skip-to-main')) {
 console.log('%c👋 Welcome to my portfolio!', 'font-size: 20px; color: #0284c7; font-weight: bold;');
 console.log('%cFeel free to explore the code and reach out if you have any questions!', 'font-size: 14px; color: #0369a1;');
 
-// ===== CERTIFICATIONS SLIDER - HORIZONTAL SCROLL ON MOUSE WHEEL =====
+// ===== CERTIFICATIONS SLIDER =====
 
 const certSlider = document.getElementById('cert-slider');
+const certPrev = document.getElementById('cert-prev');
+const certNext = document.getElementById('cert-next');
+const certDotsContainer = document.getElementById('cert-dots');
 
-if (certSlider) {
-    // Enable horizontal scrolling with mouse wheel
-    certSlider.addEventListener('wheel', (e) => {
-        if (e.deltaY !== 0) {
-            e.preventDefault();
-            certSlider.scrollLeft += e.deltaY;
+if (certSlider && certPrev && certNext && certDotsContainer) {
+    const certCards = certSlider.querySelectorAll('.cert-card');
+    let currentIndex = 0;
+    
+    // Create pagination dots
+    certCards.forEach((_, index) => {
+        const dot = document.createElement('button');
+        dot.className = `cert-dot ${index === 0 ? 'active' : ''}`;
+        dot.setAttribute('aria-label', `Go to certification ${index + 1}`);
+        dot.addEventListener('click', () => goToSlide(index));
+        certDotsContainer.appendChild(dot);
+    });
+    
+    const dots = certDotsContainer.querySelectorAll('.cert-dot');
+    
+    // Update slider position
+    function updateSlider() {
+        certSlider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        
+        // Update dots
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+        
+        // Update button states (optional visual feedback)
+        certPrev.style.opacity = currentIndex === 0 ? '0.5' : '1';
+        certNext.style.opacity = currentIndex === certCards.length - 1 ? '0.5' : '1';
+    }
+    
+    // Go to specific slide
+    function goToSlide(index) {
+        currentIndex = index;
+        updateSlider();
+    }
+    
+    // Previous slide
+    certPrev.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateSlider();
         }
-    }, { passive: false });
-    
-    // Enable drag to scroll
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-    
-    certSlider.addEventListener('mousedown', (e) => {
-        isDown = true;
-        certSlider.style.cursor = 'grabbing';
-        startX = e.pageX - certSlider.offsetLeft;
-        scrollLeft = certSlider.scrollLeft;
     });
     
-    certSlider.addEventListener('mouseleave', () => {
-        isDown = false;
-        certSlider.style.cursor = 'grab';
+    // Next slide
+    certNext.addEventListener('click', () => {
+        if (currentIndex < certCards.length - 1) {
+            currentIndex++;
+            updateSlider();
+        }
     });
     
-    certSlider.addEventListener('mouseup', () => {
-        isDown = false;
-        certSlider.style.cursor = 'grab';
-    });
+    // Touch/swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
     
-    certSlider.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - certSlider.offsetLeft;
-        const walk = (x - startX) * 2; // Scroll speed multiplier
-        certSlider.scrollLeft = scrollLeft - walk;
-    });
+    certSlider.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    
+    certSlider.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    }, { passive: true });
+    
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const diff = touchStartX - touchEndX;
+        
+        if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0 && currentIndex < certCards.length - 1) {
+                // Swipe left - next
+                currentIndex++;
+                updateSlider();
+            } else if (diff < 0 && currentIndex > 0) {
+                // Swipe right - previous
+                currentIndex--;
+                updateSlider();
+            }
+        }
+    }
+    
+    // Initialize
+    updateSlider();
 }
 
 // ===== OPTIONAL: Service Worker for Offline Support =====
