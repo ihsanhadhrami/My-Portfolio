@@ -151,24 +151,9 @@ window.addEventListener('scroll', () => {
 // Update project links with your actual GitHub and live demo URLs
 const projects = [
     {
-        title: 'E-Commerce Platform',
-        github: 'https://github.com/yourusername/ecommerce-platform',
-        demo: 'https://ecommerce-demo.example.com'
-    },
-    {
-        title: 'Task Management App',
-        github: 'https://github.com/yourusername/task-manager',
-        demo: 'https://taskmanager-demo.example.com'
-    },
-    {
-        title: 'AI Chatbot Assistant',
-        github: 'https://github.com/yourusername/ai-chatbot',
-        demo: 'https://chatbot-demo.example.com'
-    },
-    {
-        title: 'Data Analytics Dashboard',
-        github: 'https://github.com/yourusername/analytics-dashboard',
-        demo: 'https://dashboard-demo.example.com'
+        title: 'Job Listing Web Scraper',
+        github: 'https://github.com/ihsanhadhrami/web_scraping_python',
+        demo: 'https://github.com/ihsanhadhrami/web_scraping_python'
     }
 ];
 
