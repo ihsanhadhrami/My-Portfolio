@@ -1,0 +1,81 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b4a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0ea5e9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#grad2)"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="100" cy="100" r="150" fill="#ff6b4a" opacity="0.1"/>
+  <circle cx="1100" cy="530" r="200" fill="#0ea5e9" opacity="0.1"/>
+  
+  <!-- Main content area - Browser window mockup -->
+  <rect x="100" y="80" width="1000" height="470" rx="10" fill="#1e293b" stroke="url(#grad1)" stroke-width="3"/>
+  
+  <!-- Browser chrome -->
+  <rect x="100" y="80" width="1000" height="40" rx="10" fill="#334155"/>
+  <circle cx="130" cy="100" r="6" fill="#ef4444"/>
+  <circle cx="155" cy="100" r="6" fill="#f59e0b"/>
+  <circle cx="180" cy="100" r="6" fill="#10b981"/>
+  
+  <!-- Terminal/Console view -->
+  <rect x="120" y="140" width="960" height="390" rx="5" fill="#0f172a"/>
+  
+  <!-- Terminal text lines (simulating scraper output) -->
+  <text x="140" y="175" font-family="Monaco, Courier New, monospace" font-size="16" fill="#10b981">
+    $ python job_list_web_scraping.py
+  </text>
+  <text x="140" y="205" font-family="Monaco, Courier New, monospace" font-size="14" fill="#64748b">
+    2026-01-02 14:30:15 - INFO - Starting job scraping script...
+  </text>
+  <text x="140" y="230" font-family="Monaco, Courier New, monospace" font-size="14" fill="#64748b">
+    2026-01-02 14:30:16 - INFO - Initializing Chrome WebDriver...
+  </text>
+  <text x="140" y="255" font-family="Monaco, Courier New, monospace" font-size="14" fill="#0ea5e9">
+    ============================================================
+  </text>
+  <text x="140" y="280" font-family="Monaco, Courier New, monospace" font-size="14" fill="#0ea5e9">
+    Scraping: Indeed Malaysia
+  </text>
+  <text x="140" y="305" font-family="Monaco, Courier New, monospace" font-size="14" fill="#0ea5e9">
+    ============================================================
+  </text>
+  <text x="140" y="330" font-family="Monaco, Courier New, monospace" font-size="14" fill="#64748b">
+    2026-01-02 14:30:20 - INFO - Found 30 job listings
+  </text>
+  <text x="140" y="355" font-family="Monaco, Courier New, monospace" font-size="14" fill="#10b981">
+    1. Python Automation Developer
+  </text>
+  <text x="140" y="375" font-family="Monaco, Courier New, monospace" font-size="13" fill="#94a3b8">
+       Company: Tech Solutions Malaysia
+  </text>
+  <text x="140" y="395" font-family="Monaco, Courier New, monospace" font-size="13" fill="#94a3b8">
+       Location: Kuala Lumpur
+  </text>
+  <text x="140" y="420" font-family="Monaco, Courier New, monospace" font-size="14" fill="#64748b">
+    2026-01-02 14:30:25 - INFO - Processing 30 job listings
+  </text>
+  <text x="140" y="445" font-family="Monaco, Courier New, monospace" font-size="14" fill="#10b981">
+    ✓ Successfully scraped 30 jobs from Indeed Malaysia
+  </text>
+  <text x="140" y="470" font-family="Monaco, Courier New, monospace" font-size="14" fill="#10b981">
+    ✓ Successfully exported 30 jobs to output/all_job_listings.xlsx
+  </text>
+  <text x="140" y="495" font-family="Monaco, Courier New, monospace" font-size="14" fill="#64748b">
+    2026-01-02 14:30:28 - INFO - Script completed successfully
+  </text>
+  
+  <!-- Title overlay -->
+  <text x="600" y="590" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="url(#grad1)" text-anchor="middle">
+    Job Listing Web Scraper
+  </text>
+</svg>
