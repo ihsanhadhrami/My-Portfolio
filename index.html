@@ -164,30 +164,49 @@
     </section>
 
     <!-- ===== ABOUT SECTION ===== -->
-    <section id="about" class="about-section">
-        <div class="about-card fade-in-element">
+    <section id="about" class="py-20 px-6 bg-slate-800/50 backdrop-blur-sm relative z-10">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-slate-100 mb-4 text-center fade-in-element">About Me</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-coral-500 to-ocean-500 mx-auto mb-12 rounded-full"></div>
             
-            <p class="about-eyebrow">ABOUT ME</p>
+            <!-- About Content Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center fade-in-element">
+                <!-- Left: Profile Image -->
+                <div class="flex justify-center md:justify-start">
+                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden border-4 border-coral-500 shadow-2xl shadow-coral-500/30 hover:shadow-coral-500/50 transition-all transform hover:scale-105">
+                        <img src="assets/images/profile.jpg" alt="Ihsan Hadhrami - Python Developer" class="w-full h-full object-cover">
+                    </div>
+                </div>
 
-            <h2 class="about-title">
-                Python Automation Developer
-            </h2>
+                <!-- Right: About Content -->
+                <div class="space-y-6">
+                    <div>
+                        <p class="text-sm font-semibold text-coral-500 uppercase tracking-widest mb-2">About</p>
+                        <h3 class="text-3xl md:text-4xl font-bold text-slate-100 mb-4">Python Automation Developer</h3>
+                        <p class="text-lg text-slate-300 leading-relaxed mb-4">
+                            I'm a Python developer with a passion for automation and workflow optimization. I specialize in building tools that eliminate repetitive tasks, streamline processes, and increase efficiency. My expertise lies in creating robust automation solutions that solve real business problems.
+                        </p>
+                        <p class="text-lg text-slate-300 leading-relaxed">
+                            I'm dedicated to writing clean, maintainable code and continuously learning best practices in Python development. My focus is on creating <strong class="text-coral-400">scalable automation solutions</strong> that deliver measurable results.
+                        </p>
+                    </div>
 
-            <p class="about-text">
-                I build <strong>Python automation tools</strong> that eliminate repetitive tasks,
-                streamline workflows, and improve operational efficiency.
-            </p>
-
-            <p class="about-text">
-                My focus is on creating <strong>clean, maintainable automation solutions</strong>
-                that solve real-world business problems.
-            </p>
-
-            <p class="about-muted">
-                Currently exploring advanced automation frameworks, backend workflows,
-                and scalable system design.
-            </p>
-
+                    <!-- Skills Section -->
+                    <div class="pt-4">
+                        <h4 class="text-sm font-semibold text-slate-200 uppercase tracking-widest mb-4">Skills & Expertise</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-4 py-2 bg-slate-900/70 border border-slate-600 rounded-full text-sm text-slate-300 hover:border-coral-500 hover:text-coral-400 transition-colors">Python</span>
+                            <span class="px-4 py-2 bg-slate-900/70 border border-slate-600 rounded-full text-sm text-slate-300 hover:border-coral-500 hover:text-coral-400 transition-colors">Automation</span>
+                            <span class="px-4 py-2 bg-slate-900/70 border border-slate-600 rounded-full text-sm text-slate-300 hover:border-coral-500 hover:text-coral-400 transition-colors">Web Scraping</span>
+                            <span class="px-4 py-2 bg-slate-900/70 border border-slate-600 rounded-full text-sm text-slate-300 hover:border-coral-500 hover:text-coral-400 transition-colors">Selenium</span>
+                            <span class="px-4 py-2 bg-slate-900/70 border border-slate-600 rounded-full text-sm text-slate-300 hover:border-coral-500 hover:text-coral-400 transition-colors">Data Processing</span>
+                            <span class="px-4 py-2 bg-slate-900/70 border border-slate-600 rounded-full text-sm text-slate-300 hover:border-coral-500 hover:text-coral-400 transition-colors">APIs</span>
+                            <span class="px-4 py-2 bg-slate-900/70 border border-slate-600 rounded-full text-sm text-slate-300 hover:border-coral-500 hover:text-coral-400 transition-colors">PyInstaller</span>
+                            <span class="px-4 py-2 bg-slate-900/70 border border-slate-600 rounded-full text-sm text-slate-300 hover:border-coral-500 hover:text-coral-400 transition-colors">RPA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     
