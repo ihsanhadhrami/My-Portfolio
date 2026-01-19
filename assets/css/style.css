@@ -284,3 +284,103 @@ textarea:focus {
         gap: 1rem;
     }
 }
+
+/* ===== ABOUT SECTION - GLASSMORPHISM ===== */
+.about-section {
+    padding: 120px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f172a 0%, #1a2847 50%, #1a1f3a 100%);
+    min-height: 100vh;
+    position: relative;
+    z-index: 10;
+}
+
+/* ===== GLASS CARD ===== */
+.about-card {
+    max-width: 720px;
+    width: 100%;
+    padding: 36px 40px;
+    border-radius: 22px;
+
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 30px 60px rgba(0, 0, 0, 0.5),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+/* ===== TEXT STYLES ===== */
+.about-eyebrow {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #94a3b8;
+    margin-bottom: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.about-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #f8fafc;
+    line-height: 1.4;
+}
+
+.about-text {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #cbd5e1;
+    margin-bottom: 14px;
+}
+
+.about-text strong {
+    color: #e2e8f0;
+    font-weight: 600;
+}
+
+.about-muted {
+    font-size: 14px;
+    color: #94a3b8;
+    margin-top: 18px;
+    line-height: 1.6;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 640px) {
+    .about-section {
+        padding: 80px 16px;
+        min-height: auto;
+    }
+
+    .about-card {
+        padding: 28px 24px;
+    }
+
+    .about-title {
+        font-size: 26px;
+    }
+
+    .about-text {
+        font-size: 15px;
+    }
+
+    .about-eyebrow {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+}
