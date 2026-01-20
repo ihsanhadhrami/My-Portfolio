@@ -54,6 +54,36 @@ html.light footer {
     background-color: #0f172a !important;
 }
 
+/* Light mode - disable glow effects */
+html.light .section-title {
+    text-shadow: none !important;
+    color: #0369a1 !important;
+}
+
+html.light .section-line {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+    animation: none !important;
+}
+
+html.light .about-glass {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border-color: rgba(14, 165, 233, 0.3) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+    animation: none !important;
+}
+
+html.light .about-glass:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+html.light .about-content h3 {
+    color: #0284c7 !important;
+}
+
+html.light .highlight {
+    text-shadow: none !important;
+}
+
 /* Skill bar transition */
 .skill-bar {
     transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -298,11 +328,18 @@ textarea:focus {
   margin-bottom: 10px;
   color: #0ea5e9;
   transition: all 0.3s ease;
+  /* Glow text effect */
+  text-shadow: 0 0 10px rgba(14, 165, 233, 0.5),
+               0 0 20px rgba(14, 165, 233, 0.3),
+               0 0 30px rgba(14, 165, 233, 0.2);
 }
 
 .section-title:hover {
   color: #38bdf8;
   transform: scale(1.02);
+  text-shadow: 0 0 15px rgba(56, 189, 248, 0.7),
+               0 0 30px rgba(56, 189, 248, 0.5),
+               0 0 45px rgba(56, 189, 248, 0.3);
 }
 
 .section-line {
@@ -311,27 +348,68 @@ textarea:focus {
   margin: 0 auto 40px;
   background: linear-gradient(to right, #0ea5e9, #22d3ee);
   border-radius: 999px;
+  /* Glow effect for dark mode */
+  box-shadow: 0 0 10px rgba(14, 165, 233, 0.6),
+              0 0 20px rgba(14, 165, 233, 0.4),
+              0 0 30px rgba(14, 165, 233, 0.2);
+  animation: lineGlow 2s ease-in-out infinite alternate;
 }
 
-/* ===== GLASS CARD ===== */
+@keyframes lineGlow {
+  from {
+    box-shadow: 0 0 10px rgba(14, 165, 233, 0.6),
+                0 0 20px rgba(14, 165, 233, 0.4),
+                0 0 30px rgba(14, 165, 233, 0.2);
+  }
+  to {
+    box-shadow: 0 0 15px rgba(14, 165, 233, 0.8),
+                0 0 30px rgba(14, 165, 233, 0.6),
+                0 0 45px rgba(14, 165, 233, 0.4);
+  }
+}
+
+/* ===== GLASS CARD WITH GLOW ===== */
 .about-glass {
   display: flex;
   justify-content: center;
   padding: 48px;
   border-radius: 24px;
+  position: relative;
 
   background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(14px);
-  border: 1px solid rgba(14, 165, 233, 0.2);
+  border: 1px solid rgba(14, 165, 233, 0.3);
 
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
-  transition: all 0.3s ease;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35),
+              0 0 20px rgba(14, 165, 233, 0.15),
+              inset 0 0 30px rgba(14, 165, 233, 0.05);
+  transition: all 0.4s ease;
+  animation: borderGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes borderGlow {
+  from {
+    border-color: rgba(14, 165, 233, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35),
+                0 0 20px rgba(14, 165, 233, 0.15),
+                inset 0 0 30px rgba(14, 165, 233, 0.05);
+  }
+  to {
+    border-color: rgba(34, 211, 238, 0.5);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35),
+                0 0 40px rgba(14, 165, 233, 0.3),
+                0 0 60px rgba(34, 211, 238, 0.15),
+                inset 0 0 40px rgba(14, 165, 233, 0.08);
+  }
 }
 
 .about-glass:hover {
   transform: translateY(-4px);
-  box-shadow: 0 30px 60px rgba(14, 165, 233, 0.15);
-  border-color: rgba(14, 165, 233, 0.35);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4),
+              0 0 50px rgba(14, 165, 233, 0.4),
+              0 0 80px rgba(34, 211, 238, 0.25),
+              inset 0 0 50px rgba(14, 165, 233, 0.1);
+  border-color: rgba(34, 211, 238, 0.6);
 }
 
 /* CENTERED CONTENT */
