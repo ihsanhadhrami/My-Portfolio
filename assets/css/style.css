@@ -303,4 +303,34 @@ html.light .text-ocean-400 {
     color: #0284c7 !important;
 }
 
+/* ===== ABOUT SECTION GLOW EFFECTS ===== */
+.about-glow-card {
+    animation: subtle-glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes subtle-glow {
+    0% {
+        box-shadow: 0 0 20px rgba(255, 111, 97, 0.15), 0 0 40px rgba(255, 111, 97, 0.05);
+    }
+    100% {
+        box-shadow: 0 0 30px rgba(255, 111, 97, 0.25), 0 0 60px rgba(255, 111, 97, 0.1);
+    }
+}
+
+.about-glow-card:hover {
+    animation: none;
+}
+
+.glow-text {
+    text-shadow: 0 0 10px rgba(255, 111, 97, 0.5), 0 0 20px rgba(255, 111, 97, 0.3);
+}
+
+.about-glow-card p {
+    transition: all 0.3s ease;
+}
+
+.about-glow-card:hover p {
+    color: #cbd5e1;
+}
+
 
