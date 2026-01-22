@@ -227,19 +227,7 @@ if (!document.querySelector('.skip-to-main')) {
 // ===== CONSOLE MESSAGE =====
 
 console.log('%c👋 Welcome to my portfolio!', 'font-size: 20px; color: #0284c7; font-weight: bold;');
-console.log('%cFeel free to explore the code and reach out if you have any questions!', 'font-size: 14px; color: #0369a1;');
-
-// ===== CERTIFICATIONS HORIZONTAL SCROLL =====
-
-const certSlider = document.getElementById('cert-slider');
-
-if (certSlider) {
-    // Enable horizontal scrolling with mouse wheel
-    certSlider.addEventListener('wheel', (e) => {
-        e.preventDefault();
-        certSlider.scrollLeft += e.deltaY;
-    }, { passive: false });
-}
+console.log('%cBuilding IT Support foundations & Python automation skills.', 'font-size: 14px; color: #0369a1;');
 
 // ===== OPTIONAL: Service Worker for Offline Support =====
 
@@ -259,127 +247,10 @@ const scrollProgress = document.getElementById('scroll-progress');
 window.addEventListener('scroll', () => {
     const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     const scrolled = (window.scrollY / windowHeight) * 100;
-    scrollProgress.style.width = scrolled + '%';
+    if (scrollProgress) {
+        scrollProgress.style.width = scrolled + '%';
+    }
 });
-
-// ===== DARK/LIGHT MODE TOGGLE =====
-
-const themeToggle = document.getElementById('theme-toggle');
-const themeToggleMobile = document.getElementById('theme-toggle-mobile');
-const html = document.documentElement;
-
-// Check for saved theme preference or default to dark
-const currentTheme = localStorage.getItem('theme') || 'dark';
-html.classList.add(currentTheme);
-
-// Update icon based on theme
-function updateThemeIcon() {
-    const icon = themeToggle.querySelector('i');
-    const iconMobile = themeToggleMobile ? themeToggleMobile.querySelector('i') : null;
-    
-    if (html.classList.contains('dark')) {
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
-        if (iconMobile) {
-            iconMobile.classList.remove('fa-moon');
-            iconMobile.classList.add('fa-sun');
-        }
-    } else {
-        icon.classList.remove('fa-sun');
-        icon.classList.add('fa-moon');
-        if (iconMobile) {
-            iconMobile.classList.remove('fa-sun');
-            iconMobile.classList.add('fa-moon');
-        }
-    }
-}
-
-updateThemeIcon();
-
-// Toggle theme
-function toggleTheme() {
-    if (html.classList.contains('dark')) {
-        html.classList.remove('dark');
-        html.classList.add('light');
-        localStorage.setItem('theme', 'light');
-    } else {
-        html.classList.remove('light');
-        html.classList.add('dark');
-        localStorage.setItem('theme', 'dark');
-    }
-    updateThemeIcon();
-}
-
-themeToggle.addEventListener('click', toggleTheme);
-if (themeToggleMobile) {
-    themeToggleMobile.addEventListener('click', toggleTheme);
-}
-
-// ===== ANIMATED STATISTICS COUNTER =====
-
-const counters = document.querySelectorAll('.counter');
-let counterAnimated = false;
-
-const animateCounter = (counter) => {
-    const target = parseInt(counter.getAttribute('data-target'));
-    const duration = 2000; // 2 seconds
-    const increment = target / (duration / 16); // 60fps
-    let current = 0;
-    
-    const updateCounter = () => {
-        current += increment;
-        if (current < target) {
-            counter.textContent = Math.floor(current);
-            requestAnimationFrame(updateCounter);
-        } else {
-            counter.textContent = target;
-        }
-    };
-    
-    updateCounter();
-};
-
-// Trigger counter animation on scroll
-const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting && !counterAnimated) {
-            counterAnimated = true;
-            counters.forEach(counter => animateCounter(counter));
-        }
-    });
-}, { threshold: 0.5 });
-
-if (counters.length > 0) {
-    counterObserver.observe(counters[0].closest('div'));
-}
-
-// ===== ANIMATED SKILL BARS =====
-
-const skillBars = document.querySelectorAll('.skill-bar');
-let skillsAnimated = false;
-
-const animateSkillBars = () => {
-    skillBars.forEach((bar, index) => {
-        setTimeout(() => {
-            const width = bar.getAttribute('data-width');
-            bar.style.width = width + '%';
-        }, index * 100); // Stagger animation
-    });
-};
-
-// Trigger skill bar animation on scroll
-const skillObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting && !skillsAnimated) {
-            skillsAnimated = true;
-            animateSkillBars();
-        }
-    });
-}, { threshold: 0.3 });
-
-if (skillBars.length > 0) {
-    skillObserver.observe(skillBars[0].closest('div'));
-}
 
 // ===== ANIMATED PARTICLES BACKGROUND =====
 

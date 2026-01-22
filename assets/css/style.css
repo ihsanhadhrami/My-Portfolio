@@ -46,42 +46,13 @@ html.light .bg-slate-800 {
     background-color: #ffffff !important;
 }
 
+/* Light mode - consistent styling */
 html.light .border-slate-700 {
     border-color: #e2e8f0 !important;
 }
 
 html.light footer {
     background-color: #0f172a !important;
-}
-
-/* Light mode - disable glow effects */
-html.light .section-title {
-    text-shadow: none !important;
-    color: #0369a1 !important;
-}
-
-html.light .section-line {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
-    animation: none !important;
-}
-
-html.light .about-glass {
-    background: rgba(255, 255, 255, 0.9) !important;
-    border-color: rgba(14, 165, 233, 0.3) !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
-    animation: none !important;
-}
-
-html.light .about-glass:hover {
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15) !important;
-}
-
-html.light .about-content h3 {
-    color: #0284c7 !important;
-}
-
-html.light .highlight {
-    text-shadow: none !important;
 }
 
 /* Skill bar transition */
@@ -253,260 +224,83 @@ textarea:focus {
     }
 }
 
-/* ===== CERTIFICATIONS SLIDER ===== */
+/* ===== CUSTOM COMPONENT STYLES ===== */
 
-/* Scroll wrapper with rounded edges */
-.cert-scroll-wrapper {
-    width: 100%;
-    overflow: hidden;
-    border-radius: 1rem;
+/* Focus cards hover effect */
+.group:hover .group-hover\:scale-110 {
+    transform: scale(1.1);
 }
 
-/* Horizontal scrollable container */
-.cert-slider-scroll {
-    display: flex;
-    gap: 1.5rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    padding: 0.5rem;
-    scrollbar-width: thin;
-    scrollbar-color: #ff6b4a #1e293b;
+/* Learning resource cards */
+.learning-card {
+    transition: all 0.3s ease;
 }
 
-/* Custom scrollbar styling */
-.cert-slider-scroll::-webkit-scrollbar {
-    height: 8px;
+.learning-card:hover {
+    transform: translateY(-4px);
 }
 
-.cert-slider-scroll::-webkit-scrollbar-track {
-    background: #1e293b;
-    border-radius: 10px;
+/* Project cards image zoom on hover */
+.group:hover img {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
 }
 
-.cert-slider-scroll::-webkit-scrollbar-thumb {
-    background: linear-gradient(to right, #ff6b4a, #0ea5e9);
-    border-radius: 10px;
+/* Skills/Tools grid items */
+.tools-item {
+    transition: all 0.3s ease;
 }
 
-.cert-slider-scroll::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(to right, #ff5733, #0284c7);
+.tools-item:hover {
+    transform: translateY(-2px);
 }
 
-/* Individual certification card */
-.cert-card-scroll {
-    min-width: 320px;
-    max-width: 380px;
-    width: 100%;
-    scroll-snap-align: center;
-    flex-shrink: 0;
-}
-
-/* Responsive card sizing */
+/* Mobile responsive improvements */
 @media (max-width: 768px) {
-    .cert-card-scroll {
-        min-width: 280px;
-        max-width: 320px;
+    /* Reduce padding on mobile */
+    section {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
     
-    .cert-slider-scroll {
-        gap: 1rem;
+    /* Stack buttons on very small screens */
+    .flex-wrap {
+        gap: 0.75rem;
     }
 }
 
-/* ===== ABOUT SECTION - RESPONSIVE GRID ===== */
-.about-section {
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: auto;
+/* Smooth section transitions */
+section {
+    transition: background-color 0.3s ease;
 }
 
-.section-title {
-  text-align: center;
-  font-size: 36px;
-  margin-bottom: 10px;
-  color: #0ea5e9;
-  transition: all 0.3s ease;
-  /* Glow text effect */
-  text-shadow: 0 0 10px rgba(14, 165, 233, 0.5),
-               0 0 20px rgba(14, 165, 233, 0.3),
-               0 0 30px rgba(14, 165, 233, 0.2);
+/* Light mode adjustments for new structure */
+html.light .bg-slate-800\/50 {
+    background-color: rgba(248, 250, 252, 0.9) !important;
 }
 
-.section-title:hover {
-  color: #38bdf8;
-  transform: scale(1.02);
-  text-shadow: 0 0 15px rgba(56, 189, 248, 0.7),
-               0 0 30px rgba(56, 189, 248, 0.5),
-               0 0 45px rgba(56, 189, 248, 0.3);
+html.light .bg-green-500\/20 {
+    background-color: rgba(34, 197, 94, 0.15) !important;
 }
 
-.section-line {
-  width: 60px;
-  height: 4px;
-  margin: 0 auto 40px;
-  background: linear-gradient(to right, #0ea5e9, #22d3ee);
-  border-radius: 999px;
-  /* Glow effect for dark mode */
-  box-shadow: 0 0 10px rgba(14, 165, 233, 0.6),
-              0 0 20px rgba(14, 165, 233, 0.4),
-              0 0 30px rgba(14, 165, 233, 0.2);
-  animation: lineGlow 2s ease-in-out infinite alternate;
+html.light .bg-yellow-500\/20 {
+    background-color: rgba(234, 179, 8, 0.15) !important;
 }
 
-@keyframes lineGlow {
-  from {
-    box-shadow: 0 0 10px rgba(14, 165, 233, 0.6),
-                0 0 20px rgba(14, 165, 233, 0.4),
-                0 0 30px rgba(14, 165, 233, 0.2);
-  }
-  to {
-    box-shadow: 0 0 15px rgba(14, 165, 233, 0.8),
-                0 0 30px rgba(14, 165, 233, 0.6),
-                0 0 45px rgba(14, 165, 233, 0.4);
-  }
+html.light .bg-ocean-500\/20 {
+    background-color: rgba(14, 165, 233, 0.15) !important;
 }
 
-/* ===== GLASS CARD WITH GLOW ===== */
-.about-glass {
-  display: flex;
-  justify-content: center;
-  padding: 48px;
-  border-radius: 24px;
-  position: relative;
-
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(14px);
-  border: 1px solid rgba(14, 165, 233, 0.3);
-
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35),
-              0 0 20px rgba(14, 165, 233, 0.15),
-              inset 0 0 30px rgba(14, 165, 233, 0.05);
-  transition: all 0.4s ease;
-  animation: borderGlow 3s ease-in-out infinite alternate;
+html.light .text-green-400 {
+    color: #16a34a !important;
 }
 
-@keyframes borderGlow {
-  from {
-    border-color: rgba(14, 165, 233, 0.3);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35),
-                0 0 20px rgba(14, 165, 233, 0.15),
-                inset 0 0 30px rgba(14, 165, 233, 0.05);
-  }
-  to {
-    border-color: rgba(34, 211, 238, 0.5);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35),
-                0 0 40px rgba(14, 165, 233, 0.3),
-                0 0 60px rgba(34, 211, 238, 0.15),
-                inset 0 0 40px rgba(14, 165, 233, 0.08);
-  }
+html.light .text-yellow-400 {
+    color: #ca8a04 !important;
 }
 
-.about-glass:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4),
-              0 0 50px rgba(14, 165, 233, 0.4),
-              0 0 80px rgba(34, 211, 238, 0.25),
-              inset 0 0 50px rgba(14, 165, 233, 0.1);
-  border-color: rgba(34, 211, 238, 0.6);
+html.light .text-ocean-400 {
+    color: #0284c7 !important;
 }
 
-/* CENTERED CONTENT */
-.about-content {
-  text-align: center;
-  max-width: 600px;
-}
-
-.about-content h3 {
-  font-size: 28px;
-  margin-bottom: 16px;
-  color: #38bdf8;
-  transition: all 0.3s ease;
-  cursor: default;
-}
-
-.about-content h3:hover {
-  color: #7dd3fc;
-  transform: scale(1.02);
-}
-
-.about-content p {
-  font-size: 16px;
-  line-height: 1.8;
-  color: #94a3b8;
-  margin-bottom: 16px;
-  transition: color 0.3s ease;
-}
-
-.about-content p:hover {
-  color: #cbd5e1;
-}
-
-.highlight {
-  color: #22d3ee;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.highlight:hover {
-  color: #67e8f9;
-  text-shadow: 0 0 10px rgba(34, 211, 238, 0.4);
-}
-
-/* TECHNOLOGIES */
-.tech-title {
-  font-size: 13px;
-  letter-spacing: 2px;
-  color: #0ea5e9;
-  margin-top: 24px;
-  margin-bottom: 16px;
-  transition: color 0.3s ease;
-}
-
-.tech-title:hover {
-  color: #38bdf8;
-}
-
-.tech-stack {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-}
-
-.tech-stack span {
-  padding: 8px 16px;
-  font-size: 13px;
-  border-radius: 999px;
-  background: rgba(14, 165, 233, 0.1);
-  border: 1px solid rgba(14, 165, 233, 0.25);
-  color: #7dd3fc;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.tech-stack span:hover {
-  background: rgba(14, 165, 233, 0.2);
-  border-color: #0ea5e9;
-  color: #e0f2fe;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.25);
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .about-section {
-    padding: 40px 16px;
-  }
-
-  .about-glass {
-    padding: 32px 24px;
-  }
-
-  .about-content h3 {
-    font-size: 24px;
-  }
-}
 

@@ -4,18 +4,18 @@
     <!-- ===== META TAGS ===== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to my portfolio. I'm a Python developer specializing in web development, automation, and creative solutions.">
-    <meta name="keywords" content="Portfolio, Developer, Python, Web Development, Automation, JavaScript, Ihsan Hadhrami">
+    <meta name="description" content="Ihsan Hadhrami - Building IT Support foundations and Python automation skills. Customer service professional with bilingual expertise transitioning into technical roles.">
+    <meta name="keywords" content="IT Support, Python Automation, Customer Service, Technical Skills, Junior Developer, Ihsan Hadhrami">
     <meta name="author" content="Ihsan Hadhrami">
     
     <!-- Open Graph Tags for Social Sharing -->
-    <meta property="og:title" content="Ihsan Hadhrami - Python Developer | Automation Specialist">
-    <meta property="og:description" content="Welcome to my portfolio. Python developer specializing in automation and workflow optimization. Explore my automation projects and technical expertise.">
+    <meta property="og:title" content="Ihsan Hadhrami - IT Support & Python Automation">
+    <meta property="og:description" content="Customer service professional building IT support foundations and Python automation skills. Bilingual (Arabic-English) with a focus on practical workflow optimization.">
     <meta property="og:image" content="assets/images/favicon-generated.png">
-    <meta property="og:url" content="https://yourusername.github.io">
+    <meta property="og:url" content="https://ihsanhadhrami.github.io">
     <meta property="og:type" content="website">
     
-    <title>Ihsan Hadhrami - Python Developer | Automation Specialist</title>
+    <title>Ihsan Hadhrami - IT Support & Python Automation</title>
     
     <!-- ===== FAVICON ===== -->
     <link rel="icon" type="image/png" href="assets/images/favicon-generated.png">
@@ -90,38 +90,31 @@
             <!-- Desktop Menu -->
             <ul class="hidden md:flex gap-8 items-center">
                 <li><a href="#home" class="text-slate-300 hover:text-coral-500 transition-colors font-medium">Home</a></li>
+                <li><a href="#focus" class="text-slate-300 hover:text-coral-500 transition-colors font-medium">Focus Areas</a></li>
+                <li><a href="#it-support" class="text-slate-300 hover:text-coral-500 transition-colors font-medium">IT Support</a></li>
+                <li><a href="#python" class="text-slate-300 hover:text-coral-500 transition-colors font-medium">Python</a></li>
                 <li><a href="#about" class="text-slate-300 hover:text-coral-500 transition-colors font-medium">About</a></li>
-                <li><a href="#projects" class="text-slate-300 hover:text-coral-500 transition-colors font-medium">Projects</a></li>
                 <li><a href="#contact" class="text-slate-300 hover:text-coral-500 transition-colors font-medium">Contact</a></li>
-                <li>
-                    <button id="theme-toggle" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 transition-all">
-                        <i class="fas fa-sun text-coral-500 text-xl"></i>
-                    </button>
-                </li>
             </ul>
             
             <!-- Mobile Menu Toggle -->
-            <button id="menu-toggle" class="md:hidden text-coral-500 text-2xl">
+            <button id="menu-toggle" class="md:hidden text-coral-500 text-2xl" aria-label="Open menu">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
         
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-slate-900 border-l border-slate-700 transform translate-x-full transition-transform duration-300 md:hidden">
-            <button id="menu-close" class="absolute top-6 right-6 text-slate-300 text-2xl">
+            <button id="menu-close" class="absolute top-6 right-6 text-slate-300 text-2xl" aria-label="Close menu">
                 <i class="fas fa-times"></i>
             </button>
             <ul class="flex flex-col gap-6 p-8 mt-16">
                 <li><a href="#home" class="text-slate-300 hover:text-coral-500 transition-colors font-medium text-lg mobile-link">Home</a></li>
+                <li><a href="#focus" class="text-slate-300 hover:text-coral-500 transition-colors font-medium text-lg mobile-link">Focus Areas</a></li>
+                <li><a href="#it-support" class="text-slate-300 hover:text-coral-500 transition-colors font-medium text-lg mobile-link">IT Support</a></li>
+                <li><a href="#python" class="text-slate-300 hover:text-coral-500 transition-colors font-medium text-lg mobile-link">Python</a></li>
                 <li><a href="#about" class="text-slate-300 hover:text-coral-500 transition-colors font-medium text-lg mobile-link">About</a></li>
-                <li><a href="#projects" class="text-slate-300 hover:text-coral-500 transition-colors font-medium text-lg mobile-link">Projects</a></li>
                 <li><a href="#contact" class="text-slate-300 hover:text-coral-500 transition-colors font-medium text-lg mobile-link">Contact</a></li>
-                <li class="mt-4">
-                    <button id="theme-toggle-mobile" class="w-full p-3 rounded-lg bg-slate-800 hover:bg-slate-700 transition-all text-left">
-                        <i class="fas fa-sun text-coral-500 mr-2"></i>
-                        <span class="text-slate-300">Toggle Theme</span>
-                    </button>
-                </li>
             </ul>
         </div>
     </nav>
@@ -134,20 +127,23 @@
                 <div class="w-28 h-28 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-coral-500 shadow-lg shadow-coral-500/30 hover:scale-105 transition-transform flex-shrink-0">
                     <img src="assets/images/profile.jpg" alt="Ihsan Hadhrami Profile" class="w-full h-full object-cover">
                 </div>
-                <h1 class="text-5xl md:text-6xl font-bold text-slate-100 leading-tight">
+                <h1 class="text-4xl md:text-5xl font-bold text-slate-100 leading-tight">
                     Hi, I'm <span class="bg-gradient-to-r from-coral-500 to-ocean-500 bg-clip-text text-transparent">Ihsan Hadhrami</span>
                 </h1>
             </div>
             
             <!-- Tagline -->
-            <p class="text-xl md:text-2xl text-slate-300 mb-8 leading-relaxed">
-                Python developer specializing in automation and workflow optimization. I build efficient solutions that streamline processes and solve complex problems.
+            <p class="text-xl md:text-2xl text-slate-300 mb-4 leading-relaxed">
+                Building IT Support Foundations & Python Automation Skills
+            </p>
+            <p class="text-lg text-slate-400 mb-8 max-w-2xl mx-auto">
+                Customer service professional with bilingual expertise (Arabic-English), developing technical skills in IT fundamentals and practical workflow automation.
             </p>
             
             <!-- CTA Buttons -->
-            <div class="flex gap-4 justify-center mb-12">
-                <a href="#projects" class="bg-gradient-to-r from-coral-500 to-coral-600 text-white px-8 py-3 rounded-lg hover:from-coral-600 hover:to-coral-700 transition-all transform hover:scale-105 font-medium shadow-lg shadow-coral-500/30">
-                    View My Work
+            <div class="flex gap-4 justify-center mb-12 flex-wrap">
+                <a href="#focus" class="bg-gradient-to-r from-coral-500 to-coral-600 text-white px-8 py-3 rounded-lg hover:from-coral-600 hover:to-coral-700 transition-all transform hover:scale-105 font-medium shadow-lg shadow-coral-500/30">
+                    View My Focus Areas
                 </a>
                 <a href="#contact" class="border-2 border-coral-500 text-coral-500 px-8 py-3 rounded-lg hover:bg-coral-500/10 transition-all font-medium">
                     Get In Touch
@@ -163,126 +159,218 @@
         </div>
     </section>
 
-    <!-- ===== ABOUT SECTION ===== -->
-    <section id="about" class="about-section">
-        <h2 class="section-title">About</h2>
-        <div class="section-line"></div>
-
-        <div class="about-glass">
-            <div class="about-content">
-                <h3>Python Automation Developer</h3>
-
-                <p>
-                    I build <span class="highlight">automation tools</span> that solve real-world
-                    business problems by eliminating repetitive tasks and optimizing workflows.
-                </p>
-
-                <p>
-                    My expertise includes web scraping, RPA, data processing, and backend
-                    automation — with a strong focus on clean, scalable system design.
-                </p>
-
-                <p class="tech-title">TECHNOLOGIES</p>
-
-                <div class="tech-stack">
-                    <span>Python</span>
-                    <span>Selenium</span>
-                    <span>Web Scraping</span>
-                    <span>Automation</span>
-                    <span>APIs</span>
-                    <span>Data Processing</span>
-                    <span>RPA</span>
-                    <span>PyInstaller</span>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- ===== CERTIFICATIONS SECTION ===== -->
-    <section id="certifications" class="py-20 px-6 bg-slate-900 relative z-10">
+    <!-- ===== TECHNICAL FOCUS OVERVIEW ===== -->
+    <section id="focus" class="py-20 px-6 bg-slate-800/50 backdrop-blur-sm relative z-10">
         <div class="max-w-5xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-bold text-slate-100 mb-4 text-center fade-in-element">Certifications</h2>
-            <div class="w-20 h-1 bg-gradient-to-r from-coral-500 to-ocean-500 mx-auto mb-12 rounded-full"></div>
+            <h2 class="text-4xl md:text-5xl font-bold text-slate-100 mb-4 text-center fade-in-element">Technical Focus Areas</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-coral-500 to-ocean-500 mx-auto mb-6 rounded-full"></div>
+            <p class="text-slate-400 text-center max-w-2xl mx-auto mb-12">
+                I'm building skills in two complementary areas to support my transition into technical roles.
+            </p>
             
-            <!-- Certifications Slider -->
-            <div class="cert-scroll-wrapper">
-                <div id="cert-slider" class="cert-slider-scroll">
-                    <!-- Cert 1: Automate Your Life with Python + ChatGPT -->
-                    <div class="cert-card-scroll bg-slate-800 border border-slate-700 p-8 rounded-xl text-center hover:shadow-lg hover:shadow-coral-500/20 hover:border-coral-500 transition-all transform hover:scale-105 fade-in-element">
-                        <div class="text-5xl mb-4 text-coral-500">
-                            <i class="fas fa-certificate"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-100 mb-2">Automate Your Life With Python + ChatGPT Prize</h3>
-                        <p class="text-slate-400 text-sm mb-3">Udemy</p>
-                        <p class="text-xs text-coral-500 font-semibold">In Progress</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- IT Support Card -->
+                <a href="#it-support" class="bg-slate-900 border border-slate-700 p-8 rounded-xl hover:shadow-lg hover:shadow-coral-500/20 hover:border-coral-500 transition-all transform hover:scale-105 fade-in-element group block">
+                    <div class="text-5xl mb-4 text-coral-500 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-headset"></i>
                     </div>
-                    
-                    <!-- Cert 2: Complete Python Mastery -->
-                    <div class="cert-card-scroll bg-slate-800 border border-slate-700 p-8 rounded-xl text-center hover:shadow-lg hover:shadow-coral-500/20 hover:border-coral-500 transition-all transform hover:scale-105 fade-in-element">
-                        <div class="text-5xl mb-4 text-coral-500">
-                            <i class="fas fa-certificate"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-100 mb-2">Complete Python Mastery Programming Course – From Beginner to Pro</h3>
-                        <p class="text-slate-400 text-sm mb-3">Code with Mosh</p>
-                        <p class="text-xs text-coral-500 font-semibold">In Progress</p>
+                    <h3 class="text-xl font-bold text-slate-100 mb-3">IT Support & Technical Foundations</h3>
+                    <p class="text-slate-400 mb-4">
+                        Studying hardware, operating systems, and networking fundamentals. Building a troubleshooting mindset through structured learning.
+                    </p>
+                    <span class="text-xs bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full font-semibold">Foundation Level</span>
+                </a>
+                
+                <!-- Python Automation Card -->
+                <a href="#python" class="bg-slate-900 border border-slate-700 p-8 rounded-xl hover:shadow-lg hover:shadow-ocean-500/20 hover:border-ocean-500 transition-all transform hover:scale-105 fade-in-element group block">
+                    <div class="text-5xl mb-4 text-ocean-500 group-hover:scale-110 transition-transform">
+                        <i class="fab fa-python"></i>
                     </div>
-                    
-                    <!-- Cert 3: PCEP -->
-                    <div class="cert-card-scroll bg-slate-800 border border-slate-700 p-8 rounded-xl text-center hover:shadow-lg hover:shadow-coral-500/20 hover:border-coral-500 transition-all transform hover:scale-105 fade-in-element">
-                        <div class="text-5xl mb-4 text-coral-500">
-                            <i class="fas fa-certificate"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-100 mb-2">PCEP – Certified Entry-Level Python Programmer</h3>
-                        <p class="text-slate-400 text-sm mb-3">Python Institute</p>
-                        <p class="text-xs text-coral-500 font-semibold">Planned</p>
-                    </div>
-                    
-                    <!-- Cert 4: PCAP -->
-                    <div class="cert-card-scroll bg-slate-800 border border-slate-700 p-8 rounded-xl text-center hover:shadow-lg hover:shadow-coral-500/20 hover:border-coral-500 transition-all transform hover:scale-105 fade-in-element">
-                        <div class="text-5xl mb-4 text-coral-500">
-                            <i class="fas fa-certificate"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-100 mb-2">PCAP – Certified Associate Python Programmer</h3>
-                        <p class="text-slate-400 text-sm mb-3">Python Institute</p>
-                        <p class="text-xs text-coral-500 font-semibold">Planned</p>
-                    </div>
-                </div>
+                    <h3 class="text-xl font-bold text-slate-100 mb-3">Python Automation & Workflow Optimization</h3>
+                    <p class="text-slate-400 mb-4">
+                        Writing Python scripts for practical automation: file handling, report generation, and eliminating repetitive tasks.
+                    </p>
+                    <span class="text-xs bg-ocean-500/20 text-ocean-400 px-3 py-1 rounded-full font-semibold">Junior Level</span>
+                </a>
             </div>
         </div>
     </section>
 
-
-    <!-- ===== PROJECTS SECTION ===== -->
-    <section id="projects" class="py-20 px-6 bg-slate-800/50 backdrop-blur-sm relative z-10">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-bold text-slate-100 mb-4 text-center fade-in-element">Featured Projects</h2>
-            <div class="w-20 h-1 bg-gradient-to-r from-coral-500 to-ocean-500 mx-auto mb-12 rounded-full"></div>
+    <!-- ===== IT SUPPORT & TECHNICAL FOUNDATIONS ===== -->
+    <section id="it-support" class="py-20 px-6 bg-slate-900 relative z-10">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-slate-100 mb-4 text-center fade-in-element">IT Support & Technical Foundations</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-coral-500 to-ocean-500 mx-auto mb-6 rounded-full"></div>
+            <p class="text-slate-400 text-center max-w-3xl mx-auto mb-12">
+                I'm building foundational IT knowledge through self-study while leveraging transferable skills from my customer service experience. My goal is to transition into a technical support role.
+            </p>
             
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                <!-- Transferable Experience -->
+                <div class="bg-slate-800 border border-slate-700 p-8 rounded-xl fade-in-element">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="text-3xl text-coral-500">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-100">Transferable Experience</h3>
+                    </div>
+                    <ul class="space-y-4 text-slate-300">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-green-500 mt-1 flex-shrink-0"></i>
+                            <span>Bilingual customer service (Arabic-English) with experience handling inquiries professionally</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-green-500 mt-1 flex-shrink-0"></i>
+                            <span>Daily navigation of business systems and structured workflows</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-green-500 mt-1 flex-shrink-0"></i>
+                            <span>Clear communication and documentation skills</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check text-green-500 mt-1 flex-shrink-0"></i>
+                            <span>Patience and structured approach to resolving issues</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Currently Studying -->
+                <div class="bg-slate-800 border border-slate-700 p-8 rounded-xl fade-in-element">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="text-3xl text-ocean-500">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-100">Currently Studying</h3>
+                    </div>
+                    <ul class="space-y-4 text-slate-300">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-microchip text-ocean-500 mt-1 flex-shrink-0"></i>
+                            <span>Hardware fundamentals: PC components, peripherals, and mobile devices</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-desktop text-ocean-500 mt-1 flex-shrink-0"></i>
+                            <span>Operating systems: Windows installation, configuration, and troubleshooting</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-network-wired text-ocean-500 mt-1 flex-shrink-0"></i>
+                            <span>Basic networking: IP addressing, DNS, and common protocols</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-tools text-ocean-500 mt-1 flex-shrink-0"></i>
+                            <span>Troubleshooting methodology and systematic problem-solving</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Learning Resources -->
+            <div class="bg-slate-800/50 border border-slate-700 p-8 rounded-xl fade-in-element">
+                <h3 class="text-xl font-bold text-slate-100 mb-6 text-center">Learning Resources & Progress</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Resource 1: Mike Meyers Book -->
+                    <div class="bg-slate-900 p-6 rounded-lg border border-slate-700 text-center">
+                        <div class="text-3xl text-coral-500 mb-3">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h4 class="font-semibold text-slate-100 mb-2">CompTIA A+ Study</h4>
+                        <p class="text-slate-400 text-sm mb-3">Mike Meyers' CompTIA A+ Certification Guide</p>
+                        <span class="text-xs bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full font-semibold">In Progress</span>
+                    </div>
+                    
+                    <!-- Resource 2: Professor Messer -->
+                    <div class="bg-slate-900 p-6 rounded-lg border border-slate-700 text-center">
+                        <div class="text-3xl text-coral-500 mb-3">
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                        <h4 class="font-semibold text-slate-100 mb-2">Professor Messer</h4>
+                        <p class="text-slate-400 text-sm mb-3">CompTIA A+ Video Training Series</p>
+                        <span class="text-xs bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full font-semibold">In Progress</span>
+                    </div>
+                    
+                    <!-- Resource 3: Udemy Course -->
+                    <div class="bg-slate-900 p-6 rounded-lg border border-slate-700 text-center">
+                        <div class="text-3xl text-green-500 mb-3">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h4 class="font-semibold text-slate-100 mb-2">IT Support Technical Skills</h4>
+                        <p class="text-slate-400 text-sm mb-3">Helpdesk Course by Kevin Apolinario (Udemy)</p>
+                        <span class="text-xs bg-green-500/20 text-green-400 px-3 py-1 rounded-full font-semibold">Completed</span>
+                    </div>
+                </div>
+                
+                <p class="text-slate-500 text-sm text-center mt-6 italic">
+                    Note: I am currently studying for CompTIA A+ but do not yet hold this certification.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PYTHON AUTOMATION & WORKFLOW OPTIMIZATION ===== -->
+    <section id="python" class="py-20 px-6 bg-slate-800/50 backdrop-blur-sm relative z-10">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-slate-100 mb-4 text-center fade-in-element">Python Automation & Workflow Optimization</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-coral-500 to-ocean-500 mx-auto mb-6 rounded-full"></div>
+            <p class="text-slate-400 text-center max-w-3xl mx-auto mb-12">
+                I write Python scripts to automate repetitive tasks, handle files, and generate reports. My focus is on practical, business-oriented automation that saves time and reduces manual work.
+            </p>
+            
+            <!-- What I Build -->
+            <div class="bg-slate-900 border border-slate-700 p-8 rounded-xl mb-12 fade-in-element">
+                <h3 class="text-xl font-bold text-slate-100 mb-6 text-center">What I'm Building</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div class="text-3xl text-ocean-500 mb-3">
+                            <i class="fas fa-spider"></i>
+                        </div>
+                        <h4 class="font-semibold text-slate-100 mb-2">Web Scraping</h4>
+                        <p class="text-slate-400 text-sm">Extracting data from websites</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl text-ocean-500 mb-3">
+                            <i class="fas fa-file-excel"></i>
+                        </div>
+                        <h4 class="font-semibold text-slate-100 mb-2">File Handling</h4>
+                        <p class="text-slate-400 text-sm">Processing Excel, CSV, PDF files</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl text-ocean-500 mb-3">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h4 class="font-semibold text-slate-100 mb-2">Report Generation</h4>
+                        <p class="text-slate-400 text-sm">Creating automated reports</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl text-ocean-500 mb-3">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h4 class="font-semibold text-slate-100 mb-2">Task Automation</h4>
+                        <p class="text-slate-400 text-sm">Eliminating repetitive work</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Projects -->
+            <h3 class="text-2xl font-bold text-slate-100 mb-8 text-center fade-in-element">Projects</h3>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-6xl mx-auto">
                 
                 <!-- PROJECT 1: Job Scraper -->
-                <div class="bg-slate-900 border border-slate-700 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-coral-500/20 hover:border-coral-500 transition-all transform hover:scale-105 fade-in-element group">
-                    <!-- Project Image -->
+                <div class="bg-slate-900 border border-slate-700 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-coral-500/20 hover:border-coral-500 transition-all fade-in-element group">
                     <div class="aspect-video bg-gradient-to-br from-coral-600 to-ocean-600 flex items-center justify-center overflow-hidden relative">
                         <a href="assets/images/Job_listing_scrapped_demo.mp4" target="_blank"> 
                             <img src="assets/images/job-scraper-preview.svg" alt="Job Scraper Preview" class="w-full h-full object-cover">
                         </a>
                     </div>
                     
-                    <!-- Project Info -->
                     <div class="p-8">
-                        <!-- Title & Badge -->
                         <div class="flex items-center justify-between mb-2">
                             <h3 class="text-2xl font-bold text-slate-100">Job Listing Web Scraper</h3>
-                            <span class="text-xs bg-coral-500/20 text-coral-500 px-3 py-1 rounded-full font-semibold">Production</span>
+                            <span class="text-xs bg-green-500/20 text-green-400 px-3 py-1 rounded-full font-semibold">Complete</span>
                         </div>
                         
-                        <!-- Description -->
                         <p class="text-slate-400 mb-6 leading-relaxed">
-                            Production-ready web scraper that automates job listing collection from Indeed Malaysia. Features comprehensive logging, error handling, Excel export with timestamps, and packaged as a standalone executable. Includes anti-detection measures and configurable timeouts.
+                            Python script that automates job listing collection from Indeed Malaysia. Features error handling, Excel export with timestamps, and packaged as a standalone executable for easy use.
                         </p>
                         
-                        <!-- Tech Tags -->
                         <div class="flex flex-wrap gap-2 mb-6">
                             <span class="text-xs bg-slate-800 border border-slate-700 text-slate-300 px-3 py-1 rounded-full font-medium">Python</span>
                             <span class="text-xs bg-slate-800 border border-slate-700 text-slate-300 px-3 py-1 rounded-full font-medium">Selenium</span>
@@ -290,13 +378,9 @@
                             <span class="text-xs bg-slate-800 border border-slate-700 text-slate-300 px-3 py-1 rounded-full font-medium">PyInstaller</span>
                         </div>
                         
-                        <!-- Links -->
                         <div class="flex flex-wrap gap-4">
                             <a href="https://github.com/ihsanhadhrami/web_scraping_python" target="_blank" rel="noopener noreferrer" class="text-coral-500 hover:text-coral-400 font-semibold flex items-center gap-2 transition-colors">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                            <a href="https://github.com/ihsanhadhrami/web_scraping_python" target="_blank" rel="noopener noreferrer" class="text-coral-500 hover:text-coral-400 font-semibold flex items-center gap-2 transition-colors">
-                                <i class="fas fa-external-link-alt"></i> View Code
+                                <i class="fab fa-github"></i> View Code
                             </a>
                             <a href="assets/Sample_Job_Listing_Python.xlsx" download class="text-ocean-500 hover:text-ocean-400 font-semibold flex items-center gap-2 transition-colors">
                                 <i class="fas fa-file-excel"></i> Sample Output
@@ -305,86 +389,67 @@
                     </div>
                 </div>
                 
-                <!-- PROJECT 2: Image Automation Engine -->
-                <div class="bg-slate-900 border border-slate-700 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-ocean-500/20 hover:border-ocean-500 transition-all transform hover:scale-105 fade-in-element group">
-                    <!-- Project Image -->
+                <!-- PROJECT 2: Image Automation -->
+                <div class="bg-slate-900 border border-slate-700 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-ocean-500/20 hover:border-ocean-500 transition-all fade-in-element group">
                     <div class="aspect-video bg-gradient-to-br from-ocean-600 to-coral-600 flex items-center justify-center overflow-hidden relative">
                         <a href="https://github.com/ihsanhadhrami/Image_Automation_Tool-Python" target="_blank"> 
                             <img src="assets/images/Project card 2 img.png" alt="Image Automation Tool Preview" class="w-full h-full object-cover">
                         </a>
                     </div>
                     
-                    <!-- Project Info -->
                     <div class="p-8">
-                        <!-- Title & Badge -->
                         <div class="flex items-center justify-between mb-2">
-                            <h3 class="text-2xl font-bold text-slate-100">Image Automation & Enhancement Engine</h3>
-                            <span class="text-xs bg-ocean-500/20 text-ocean-500 px-3 py-1 rounded-full font-semibold">Automation</span>
+                            <h3 class="text-2xl font-bold text-slate-100">Batch Image Processing Tool</h3>
+                            <span class="text-xs bg-green-500/20 text-green-400 px-3 py-1 rounded-full font-semibold">Complete</span>
                         </div>
                         
-                        <!-- Description -->
                         <p class="text-slate-400 mb-6 leading-relaxed">
-                            A batch image automation engine built with Python that applies iPhone-style image enhancements (exposure, contrast, saturation, highlights, shadows, sharpness) consistently at scale. Designed with a fault-tolerant processing pipeline, clean Git hygiene, and executable packaging.
+                            Batch image processing script that applies consistent enhancements (exposure, contrast, saturation, sharpness) to multiple images. Includes error handling and packaged as executable.
                         </p>
                         
-                        <!-- Tech Tags -->
                         <div class="flex flex-wrap gap-2 mb-6">
                             <span class="text-xs bg-slate-800 border border-slate-700 text-slate-300 px-3 py-1 rounded-full font-medium">Python</span>
-                            <span class="text-xs bg-slate-800 border border-slate-700 text-slate-300 px-3 py-1 rounded-full font-medium">Pillow (PIL)</span>
+                            <span class="text-xs bg-slate-800 border border-slate-700 text-slate-300 px-3 py-1 rounded-full font-medium">Pillow</span>
                             <span class="text-xs bg-slate-800 border border-slate-700 text-slate-300 px-3 py-1 rounded-full font-medium">NumPy</span>
                             <span class="text-xs bg-slate-800 border border-slate-700 text-slate-300 px-3 py-1 rounded-full font-medium">PyInstaller</span>
                         </div>
                         
-                        <!-- Links -->
                         <div class="flex flex-wrap gap-4">
                             <a href="https://github.com/ihsanhadhrami/Image_Automation_Tool-Python" target="_blank" rel="noopener noreferrer" class="text-ocean-500 hover:text-ocean-400 font-semibold flex items-center gap-2 transition-colors">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                            <a href="https://github.com/ihsanhadhrami/Image_Automation_Tool-Python" target="_blank" rel="noopener noreferrer" class="text-ocean-500 hover:text-ocean-400 font-semibold flex items-center gap-2 transition-colors">
-                                <i class="fas fa-code"></i> View Code
+                                <i class="fab fa-github"></i> View Code
                             </a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- PROJECT 3: AI-Powered Business Reports -->
-                <div class="bg-slate-900 border border-slate-700 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-coral-500/20 hover:border-coral-500 transition-all transform hover:scale-105 fade-in-element group">
-                    <!-- Project Image -->
+                <!-- PROJECT 3: Automated Business Reports -->
+                <div class="bg-slate-900 border border-slate-700 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-coral-500/20 hover:border-coral-500 transition-all fade-in-element group">
                     <div class="aspect-video bg-gradient-to-br from-coral-600 to-ocean-600 flex items-center justify-center overflow-hidden relative">
                         <a href="https://github.com/ihsanhadhrami/ai-powered-business-reports" target="_blank" rel="noopener noreferrer"> 
-                            <img src="assets/images/ai_powered_insights.png" alt="AI-Powered Business Reports Preview" class="w-full h-full object-cover">
+                            <img src="assets/images/ai_powered_insights.png" alt="Business Reports Preview" class="w-full h-full object-cover">
                         </a>
                     </div>
                     
-                    <!-- Project Info -->
                     <div class="p-8">
-                        <!-- Title & Badge -->
                         <div class="flex items-center justify-between mb-2">
-                            <h3 class="text-2xl font-bold text-slate-100">AI-Powered Business Reports</h3>
-                            <span class="text-xs bg-coral-500/20 text-coral-500 px-3 py-1 rounded-full font-semibold">AI/ML</span>
+                            <h3 class="text-2xl font-bold text-slate-100">Automated Business Reports</h3>
+                            <span class="text-xs bg-green-500/20 text-green-400 px-3 py-1 rounded-full font-semibold">Complete</span>
                         </div>
                         
-                        <!-- Description -->
                         <p class="text-slate-400 mb-6 leading-relaxed">
-                            Automated business reporting system that generates AI-powered insights using OpenRouter's DeepSeek R1. Analyzes KPIs, creates professional HTML reports, and sends automated emails. Features include metric calculations, trend analysis, retry mechanisms, and local model fallback.
+                            Automated reporting script that processes business data, calculates metrics, generates HTML reports, and sends emails. Features retry mechanisms and structured output.
                         </p>
                         
-                        <!-- Tech Tags -->
                         <div class="flex flex-wrap gap-2 mb-6">
                             <span class="text-xs bg-slate-800 border border-slate-700 text-slate-300 px-3 py-1 rounded-full font-medium">Python</span>
-                            <span class="text-xs bg-slate-800 border border-slate-700 text-slate-300 px-3 py-1 rounded-full font-medium">OpenRouter API</span>
                             <span class="text-xs bg-slate-800 border border-slate-700 text-slate-300 px-3 py-1 rounded-full font-medium">Pandas</span>
                             <span class="text-xs bg-slate-800 border border-slate-700 text-slate-300 px-3 py-1 rounded-full font-medium">Plotly</span>
                             <span class="text-xs bg-slate-800 border border-slate-700 text-slate-300 px-3 py-1 rounded-full font-medium">SMTP</span>
                         </div>
                         
-                        <!-- Links -->
                         <div class="flex flex-wrap gap-4">
                             <a href="https://github.com/ihsanhadhrami/ai-powered-business-reports" target="_blank" rel="noopener noreferrer" class="text-coral-500 hover:text-coral-400 font-semibold flex items-center gap-2 transition-colors">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                            <a href="https://github.com/ihsanhadhrami/ai-powered-business-reports" target="_blank" rel="noopener noreferrer" class="text-coral-500 hover:text-coral-400 font-semibold flex items-center gap-2 transition-colors">
-                                <i class="fas fa-external-link-alt"></i> View Code
+                                <i class="fab fa-github"></i> View Code
                             </a>
                         </div>
                     </div>
@@ -392,22 +457,132 @@
                 
             </div>
         </div>
-    </section> 
+    </section>
+
+    <!-- ===== TOOLS & TECHNOLOGIES ===== -->
+    <section id="tools" class="py-20 px-6 bg-slate-900 relative z-10">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-slate-100 mb-4 text-center fade-in-element">Tools & Technologies</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-coral-500 to-ocean-500 mx-auto mb-12 rounded-full"></div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Python -->
+                <div class="bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-coral-500 transition-all fade-in-element">
+                    <div class="text-4xl text-coral-500 mb-3">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h4 class="font-semibold text-slate-100">Python</h4>
+                    <p class="text-slate-500 text-xs mt-1">Scripting & Automation</p>
+                </div>
+                
+                <!-- Excel -->
+                <div class="bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-coral-500 transition-all fade-in-element">
+                    <div class="text-4xl text-green-500 mb-3">
+                        <i class="fas fa-file-excel"></i>
+                    </div>
+                    <h4 class="font-semibold text-slate-100">Excel / CSV</h4>
+                    <p class="text-slate-500 text-xs mt-1">Data Handling</p>
+                </div>
+                
+                <!-- Git -->
+                <div class="bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-coral-500 transition-all fade-in-element">
+                    <div class="text-4xl text-orange-500 mb-3">
+                        <i class="fab fa-git-alt"></i>
+                    </div>
+                    <h4 class="font-semibold text-slate-100">Git</h4>
+                    <p class="text-slate-500 text-xs mt-1">Version Control</p>
+                </div>
+                
+                <!-- VS Code -->
+                <div class="bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-coral-500 transition-all fade-in-element">
+                    <div class="text-4xl text-blue-500 mb-3">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h4 class="font-semibold text-slate-100">VS Code</h4>
+                    <p class="text-slate-500 text-xs mt-1">Development</p>
+                </div>
+                
+                <!-- Windows -->
+                <div class="bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-ocean-500 transition-all fade-in-element">
+                    <div class="text-4xl text-ocean-500 mb-3">
+                        <i class="fab fa-windows"></i>
+                    </div>
+                    <h4 class="font-semibold text-slate-100">Windows</h4>
+                    <p class="text-slate-500 text-xs mt-1">OS Fundamentals</p>
+                </div>
+                
+                <!-- Selenium -->
+                <div class="bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-ocean-500 transition-all fade-in-element">
+                    <div class="text-4xl text-ocean-500 mb-3">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h4 class="font-semibold text-slate-100">Selenium</h4>
+                    <p class="text-slate-500 text-xs mt-1">Web Automation</p>
+                </div>
+                
+                <!-- Pandas -->
+                <div class="bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-ocean-500 transition-all fade-in-element">
+                    <div class="text-4xl text-ocean-500 mb-3">
+                        <i class="fas fa-table"></i>
+                    </div>
+                    <h4 class="font-semibold text-slate-100">Pandas</h4>
+                    <p class="text-slate-500 text-xs mt-1">Data Processing</p>
+                </div>
+                
+                <!-- HTML/CSS -->
+                <div class="bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-ocean-500 transition-all fade-in-element">
+                    <div class="text-4xl text-orange-400 mb-3">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h4 class="font-semibold text-slate-100">HTML/CSS</h4>
+                    <p class="text-slate-500 text-xs mt-1">Basic Web</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ME ===== -->
+    <section id="about" class="py-20 px-6 bg-slate-800/50 backdrop-blur-sm relative z-10">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-slate-100 mb-4 text-center fade-in-element">About Me</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-coral-500 to-ocean-500 mx-auto mb-12 rounded-full"></div>
+            
+            <div class="bg-slate-900 border border-slate-700 p-8 md:p-10 rounded-xl fade-in-element">
+                <p class="text-lg text-slate-300 mb-6 leading-relaxed">
+                    I'm a customer service professional with bilingual expertise in Arabic and English, currently building technical skills to transition into IT support and automation roles.
+                </p>
+                
+                <p class="text-lg text-slate-300 mb-6 leading-relaxed">
+                    In my current role, I handle customer inquiries, navigate business systems, and follow structured workflows daily. These experiences have developed my communication skills, patience, and systematic approach to problem-solving—qualities that transfer well to technical support.
+                </p>
+                
+                <p class="text-lg text-slate-300 mb-6 leading-relaxed">
+                    Outside of work, I'm studying IT fundamentals through CompTIA A+ materials and building practical Python automation projects. I enjoy finding ways to eliminate repetitive tasks and create efficient solutions.
+                </p>
+                
+                <div class="border-t border-slate-700 pt-6 mt-6">
+                    <h3 class="font-bold text-slate-100 mb-4">What I'm Looking For</h3>
+                    <p class="text-slate-400">
+                        I'm seeking opportunities in IT support, helpdesk, or junior technical roles where I can apply my customer service experience while growing my technical capabilities. I'm eager to learn, take on challenges, and contribute to a team.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ===== CONTACT SECTION ===== -->
     <section id="contact" class="py-20 px-6 bg-slate-900 relative z-10">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-4xl md:text-5xl font-bold text-slate-100 mb-4 text-center fade-in-element">Get In Touch</h2>
             <div class="w-20 h-1 bg-gradient-to-r from-coral-500 to-ocean-500 mx-auto mb-12 rounded-full"></div>
             
-            <!-- Contact Content -->
             <div class="flex justify-center">
                 <div class="fade-in-element text-center max-w-2xl">
                     <p class="text-lg text-slate-300 mb-12 leading-relaxed">
-                        I'm always interested in hearing about new projects and opportunities. Feel free to reach out if you'd like to collaborate or just say hi!
+                        I'm open to IT support, helpdesk, or junior technical positions. Feel free to reach out if you'd like to discuss opportunities or connect professionally.
                     </p>
                     
-                    <!-- Contact Methods -->
-                    <div class="flex flex-col md:flex-row justify-center gap-12 md:gap-8">
+                    <div class="flex flex-col md:flex-row justify-center gap-12 md:gap-16">
                         <!-- Email -->
                         <div class="flex flex-col items-center group">
                             <div class="text-5xl text-coral-500 mb-3 group-hover:scale-110 transition-transform">
@@ -425,8 +600,8 @@
                                 <i class="fab fa-linkedin"></i>
                             </div>
                             <h3 class="font-bold text-slate-100 mb-2">LinkedIn</h3>
-                            <a href="https://www.linkedin.com/in/ihsan-hadhrami-ab0368287" target="_blank" class="text-slate-300 hover:text-coral-500 transition-colors">
-                                linkedin.com/in/ihsan-hadhrami-ab0368287
+                            <a href="https://www.linkedin.com/in/ihsan-hadhrami-ab0368287" target="_blank" class="text-slate-300 hover:text-coral-500 transition-colors text-sm">
+                                Connect on LinkedIn
                             </a>
                         </div>
                         
@@ -457,13 +632,13 @@
                 
                 <!-- Social Links -->
                 <div class="flex gap-6">
-                    <a href="https://github.com/ihadhrami20-csar" target="_blank" class="text-slate-400 hover:text-coral-500 transition-colors text-xl">
+                    <a href="https://github.com/ihsanhadhrami" target="_blank" class="text-slate-400 hover:text-coral-500 transition-colors text-xl" aria-label="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/ihsan-hadhrami-ab0368287" target="_blank" class="text-slate-400 hover:text-coral-500 transition-colors text-xl">
+                    <a href="https://www.linkedin.com/in/ihsan-hadhrami-ab0368287" target="_blank" class="text-slate-400 hover:text-coral-500 transition-colors text-xl" aria-label="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="mailto:ihadhrami20@gmail.com" class="text-slate-400 hover:text-coral-500 transition-colors text-xl">
+                    <a href="mailto:ihadhrami20@gmail.com" class="text-slate-400 hover:text-coral-500 transition-colors text-xl" aria-label="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
@@ -472,7 +647,7 @@
     </footer>
 
     <!-- ===== SCROLL TO TOP BUTTON ===== -->
-    <button id="scroll-to-top" class="fixed bottom-8 right-8 bg-gradient-to-r from-coral-500 to-coral-600 text-white p-4 rounded-full opacity-0 invisible transition-all transform hover:scale-110 shadow-lg shadow-coral-500/50 z-50" title="Scroll to top">
+    <button id="scroll-to-top" class="fixed bottom-8 right-8 bg-gradient-to-r from-coral-500 to-coral-600 text-white p-4 rounded-full opacity-0 invisible transition-all transform hover:scale-110 shadow-lg shadow-coral-500/50 z-50" title="Scroll to top" aria-label="Scroll to top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
