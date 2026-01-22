@@ -333,4 +333,37 @@ html.light .text-ocean-400 {
     color: #cbd5e1;
 }
 
+/* ===== CERTIFICATIONS HORIZONTAL SCROLL ===== */
+.cert-scroll-track {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 111, 97, 0.5) rgba(30, 41, 59, 0.5);
+    -webkit-overflow-scrolling: touch;
+}
+
+.cert-scroll-track::-webkit-scrollbar {
+    height: 8px;
+}
+
+.cert-scroll-track::-webkit-scrollbar-track {
+    background: rgba(30, 41, 59, 0.5);
+    border-radius: 10px;
+}
+
+.cert-scroll-track::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right, rgba(255, 111, 97, 0.6), rgba(14, 165, 233, 0.6));
+    border-radius: 10px;
+}
+
+.cert-scroll-track::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to right, rgba(255, 111, 97, 0.8), rgba(14, 165, 233, 0.8));
+}
+
+.cert-card {
+    cursor: grab;
+}
+
+.cert-card:active {
+    cursor: grabbing;
+}
+
 
