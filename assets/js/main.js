@@ -306,3 +306,61 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// ===== HORIZONTAL SCROLL DRAG FUNCTIONALITY =====
+
+function enableDragScroll(containerSelector) {
+    const containers = document.querySelectorAll(containerSelector);
+    
+    containers.forEach(container => {
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+        
+        container.addEventListener('mousedown', (e) => {
+            isDown = true;
+            container.style.cursor = 'grabbing';
+            startX = e.pageX - container.offsetLeft;
+            scrollLeft = container.scrollLeft;
+        });
+        
+        container.addEventListener('mouseleave', () => {
+            isDown = false;
+            container.style.cursor = 'grab';
+        });
+        
+        container.addEventListener('mouseup', () => {
+            isDown = false;
+            container.style.cursor = 'grab';
+        });
+        
+        container.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - container.offsetLeft;
+            const walk = (x - startX) * 2;
+            container.scrollLeft = scrollLeft - walk;
+        });
+        
+        // Touch support for mobile
+        let touchStartX = 0;
+        let touchScrollLeft = 0;
+        
+        container.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].pageX - container.offsetLeft;
+            touchScrollLeft = container.scrollLeft;
+        });
+        
+        container.addEventListener('touchmove', (e) => {
+            const x = e.touches[0].pageX - container.offsetLeft;
+            const walk = (x - touchStartX) * 2;
+            container.scrollLeft = touchScrollLeft - walk;
+        });
+    });
+}
+
+// Enable drag scrolling for all horizontal scroll sections
+enableDragScroll('.cert-scroll-track');
+enableDragScroll('.project-scroll-track');
+enableDragScroll('.tools-scroll-track');
+

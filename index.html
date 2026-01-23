@@ -424,7 +424,7 @@
     </section>
 
     <!-- ===== ALL PROJECTS ===== -->
-    <section id="projects" class="py-20 px-6 bg-slate-900 relative z-10">
+    <section id="projects" class="py-20 px-6 bg-slate-900 relative z-10 overflow-hidden">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-4xl md:text-5xl font-bold text-slate-100 mb-4 text-center fade-in-element">Projects</h2>
             <div class="w-20 h-1 bg-gradient-to-r from-coral-500 to-ocean-500 mx-auto mb-6 rounded-full"></div>
@@ -432,10 +432,17 @@
                 Practical Python automation projects focused on solving real-world problems and eliminating repetitive tasks.
             </p>
             
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-6xl mx-auto">
+            <!-- Horizontal Scroll Container -->
+            <div class="project-scroll-wrapper relative">
+                <!-- Gradient Fades -->
+                <div class="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-slate-900 to-transparent z-10 pointer-events-none"></div>
+                <div class="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-slate-900 to-transparent z-10 pointer-events-none"></div>
                 
-                <!-- PROJECT 1: Job Scraper -->
-                <div class="bg-slate-900 border border-slate-700 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-coral-500/20 hover:border-coral-500 transition-all fade-in-element group">
+                <!-- Scrollable Cards -->
+                <div class="project-scroll-track flex gap-6 overflow-x-auto pb-4 scroll-smooth snap-x snap-mandatory">
+                
+                    <!-- PROJECT 1: Job Scraper -->
+                    <div class="project-card flex-shrink-0 w-96 bg-slate-900 border border-slate-700 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-coral-500/20 hover:border-coral-500 transition-all snap-center group">
                     <div class="aspect-video bg-gradient-to-br from-coral-600 to-ocean-600 flex items-center justify-center overflow-hidden relative">
                         <a href="assets/images/Job_listing_scrapped_demo.mp4" target="_blank"> 
                             <img src="assets/images/job-scraper-preview.svg" alt="Job Scraper Preview" class="w-full h-full object-cover">
@@ -470,8 +477,8 @@
                     </div>
                 </div>
                 
-                <!-- PROJECT 2: Image Automation -->
-                <div class="bg-slate-900 border border-slate-700 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-ocean-500/20 hover:border-ocean-500 transition-all fade-in-element group">
+                    <!-- PROJECT 2: Image Automation -->
+                    <div class="project-card flex-shrink-0 w-96 bg-slate-900 border border-slate-700 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-ocean-500/20 hover:border-ocean-500 transition-all snap-center group">
                     <div class="aspect-video bg-gradient-to-br from-ocean-600 to-coral-600 flex items-center justify-center overflow-hidden relative">
                         <a href="https://github.com/ihsanhadhrami/Image_Automation_Tool-Python" target="_blank"> 
                             <img src="assets/images/Project card 2 img.png" alt="Image Automation Tool Preview" class="w-full h-full object-cover">
@@ -503,8 +510,8 @@
                     </div>
                 </div>
                 
-                <!-- PROJECT 3: Automated Business Reports -->
-                <div class="bg-slate-900 border border-slate-700 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-coral-500/20 hover:border-coral-500 transition-all fade-in-element group">
+                    <!-- PROJECT 3: Automated Business Reports -->
+                    <div class="project-card flex-shrink-0 w-96 bg-slate-900 border border-slate-700 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-coral-500/20 hover:border-coral-500 transition-all snap-center group">
                     <div class="aspect-video bg-gradient-to-br from-coral-600 to-ocean-600 flex items-center justify-center overflow-hidden relative">
                         <a href="https://github.com/ihsanhadhrami/ai-powered-business-reports" target="_blank" rel="noopener noreferrer"> 
                             <img src="assets/images/ai_powered_insights.png" alt="Business Reports Preview" class="w-full h-full object-cover">
@@ -535,20 +542,31 @@
                         </div>
                     </div>
                 </div>
-                
+                    
+                </div>
             </div>
         </div>
     </section>
 
     <!-- ===== TOOLS & TECHNOLOGIES ===== -->
-    <section id="tools" class="py-20 px-6 bg-slate-900 relative z-10">
-        <div class="max-w-5xl mx-auto">
+    <section id="tools" class="py-20 px-6 bg-slate-900 relative z-10 overflow-hidden">
+        <div class="max-w-6xl mx-auto">
             <h2 class="text-4xl md:text-5xl font-bold text-slate-100 mb-4 text-center fade-in-element">Tools & Technologies</h2>
-            <div class="w-20 h-1 bg-gradient-to-r from-coral-500 to-ocean-500 mx-auto mb-12 rounded-full"></div>
+            <div class="w-20 h-1 bg-gradient-to-r from-coral-500 to-ocean-500 mx-auto mb-6 rounded-full"></div>
+            <p class="text-slate-400 text-center max-w-2xl mx-auto mb-12">
+                Technologies and tools I use to build automation solutions and reliable software.
+            </p>
             
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <!-- Python -->
-                <div class="bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-coral-500 transition-all fade-in-element">
+            <!-- Horizontal Scroll Container -->
+            <div class="tools-scroll-wrapper relative">
+                <!-- Gradient Fades -->
+                <div class="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-slate-900 to-transparent z-10 pointer-events-none"></div>
+                <div class="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-slate-900 to-transparent z-10 pointer-events-none"></div>
+                
+                <!-- Scrollable Cards -->
+                <div class="tools-scroll-track flex gap-6 overflow-x-auto pb-4 scroll-smooth snap-x snap-mandatory">
+                    <!-- Python -->
+                    <div class="tool-card flex-shrink-0 w-48 bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-coral-500 hover:shadow-[0_0_30px_rgba(255,111,97,0.2)] transition-all snap-center group">
                     <div class="text-4xl text-coral-500 mb-3">
                         <i class="fab fa-python"></i>
                     </div>
@@ -556,8 +574,8 @@
                     <p class="text-slate-500 text-xs mt-1">Scripting & Automation</p>
                 </div>
                 
-                <!-- Excel -->
-                <div class="bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-coral-500 transition-all fade-in-element">
+                    <!-- Excel -->
+                    <div class="tool-card flex-shrink-0 w-48 bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-coral-500 hover:shadow-[0_0_30px_rgba(255,111,97,0.2)] transition-all snap-center group">
                     <div class="text-4xl text-green-500 mb-3">
                         <i class="fas fa-file-excel"></i>
                     </div>
@@ -565,8 +583,8 @@
                     <p class="text-slate-500 text-xs mt-1">Data Handling</p>
                 </div>
                 
-                <!-- Git -->
-                <div class="bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-coral-500 transition-all fade-in-element">
+                    <!-- Git -->
+                    <div class="tool-card flex-shrink-0 w-48 bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-coral-500 hover:shadow-[0_0_30px_rgba(255,111,97,0.2)] transition-all snap-center group">
                     <div class="text-4xl text-orange-500 mb-3">
                         <i class="fab fa-git-alt"></i>
                     </div>
@@ -574,8 +592,8 @@
                     <p class="text-slate-500 text-xs mt-1">Version Control</p>
                 </div>
                 
-                <!-- VS Code -->
-                <div class="bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-coral-500 transition-all fade-in-element">
+                    <!-- VS Code -->
+                    <div class="tool-card flex-shrink-0 w-48 bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-coral-500 hover:shadow-[0_0_30px_rgba(255,111,97,0.2)] transition-all snap-center group">
                     <div class="text-4xl text-blue-500 mb-3">
                         <i class="fas fa-code"></i>
                     </div>
@@ -583,8 +601,8 @@
                     <p class="text-slate-500 text-xs mt-1">Development</p>
                 </div>
                 
-                <!-- Windows -->
-                <div class="bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-ocean-500 transition-all fade-in-element">
+                    <!-- Windows -->
+                    <div class="tool-card flex-shrink-0 w-48 bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-ocean-500 hover:shadow-[0_0_30px_rgba(14,165,233,0.2)] transition-all snap-center group">
                     <div class="text-4xl text-ocean-500 mb-3">
                         <i class="fab fa-windows"></i>
                     </div>
@@ -592,8 +610,8 @@
                     <p class="text-slate-500 text-xs mt-1">OS Fundamentals</p>
                 </div>
                 
-                <!-- Selenium -->
-                <div class="bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-ocean-500 transition-all fade-in-element">
+                    <!-- Selenium -->
+                    <div class="tool-card flex-shrink-0 w-48 bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-ocean-500 hover:shadow-[0_0_30px_rgba(14,165,233,0.2)] transition-all snap-center group">
                     <div class="text-4xl text-ocean-500 mb-3">
                         <i class="fas fa-robot"></i>
                     </div>
@@ -601,8 +619,8 @@
                     <p class="text-slate-500 text-xs mt-1">Web Automation</p>
                 </div>
                 
-                <!-- Pandas -->
-                <div class="bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-ocean-500 transition-all fade-in-element">
+                    <!-- Pandas -->
+                    <div class="tool-card flex-shrink-0 w-48 bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-ocean-500 hover:shadow-[0_0_30px_rgba(14,165,233,0.2)] transition-all snap-center group">
                     <div class="text-4xl text-ocean-500 mb-3">
                         <i class="fas fa-table"></i>
                     </div>
@@ -610,13 +628,15 @@
                     <p class="text-slate-500 text-xs mt-1">Data Processing</p>
                 </div>
                 
-                <!-- HTML/CSS -->
-                <div class="bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-ocean-500 transition-all fade-in-element">
+                    <!-- HTML/CSS -->
+                    <div class="tool-card flex-shrink-0 w-48 bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-ocean-500 hover:shadow-[0_0_30px_rgba(14,165,233,0.2)] transition-all snap-center group">
                     <div class="text-4xl text-orange-400 mb-3">
                         <i class="fab fa-html5"></i>
                     </div>
-                    <h4 class="font-semibold text-slate-100">HTML/CSS</h4>
-                    <p class="text-slate-500 text-xs mt-1">Basic Web</p>
+                        <h4 class="font-semibold text-slate-100">HTML/CSS</h4>
+                        <p class="text-slate-500 text-xs mt-1">Basic Web</p>
+                    </div>
+                    
                 </div>
             </div>
         </div>

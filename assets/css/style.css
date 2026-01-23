@@ -366,4 +366,70 @@ html.light .text-ocean-400 {
     cursor: grabbing;
 }
 
+/* ===== PROJECTS HORIZONTAL SCROLL ===== */
+.project-scroll-track {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 111, 97, 0.5) rgba(30, 41, 59, 0.5);
+    -webkit-overflow-scrolling: touch;
+}
+
+.project-scroll-track::-webkit-scrollbar {
+    height: 8px;
+}
+
+.project-scroll-track::-webkit-scrollbar-track {
+    background: rgba(30, 41, 59, 0.5);
+    border-radius: 10px;
+}
+
+.project-scroll-track::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right, rgba(255, 111, 97, 0.6), rgba(14, 165, 233, 0.6));
+    border-radius: 10px;
+}
+
+.project-scroll-track::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to right, rgba(255, 111, 97, 0.8), rgba(14, 165, 233, 0.8));
+}
+
+.project-card {
+    cursor: grab;
+}
+
+.project-card:active {
+    cursor: grabbing;
+}
+
+/* ===== TOOLS HORIZONTAL SCROLL ===== */
+.tools-scroll-track {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(14, 165, 233, 0.5) rgba(30, 41, 59, 0.5);
+    -webkit-overflow-scrolling: touch;
+}
+
+.tools-scroll-track::-webkit-scrollbar {
+    height: 8px;
+}
+
+.tools-scroll-track::-webkit-scrollbar-track {
+    background: rgba(30, 41, 59, 0.5);
+    border-radius: 10px;
+}
+
+.tools-scroll-track::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right, rgba(14, 165, 233, 0.6), rgba(255, 111, 97, 0.6));
+    border-radius: 10px;
+}
+
+.tools-scroll-track::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to right, rgba(14, 165, 233, 0.8), rgba(255, 111, 97, 0.8));
+}
+
+.tool-card {
+    cursor: grab;
+}
+
+.tool-card:active {
+    cursor: grabbing;
+}
+
 
