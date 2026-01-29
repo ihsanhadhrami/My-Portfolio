@@ -240,6 +240,81 @@ if ('serviceWorker' in navigator) {
 }
 */
 
+// ===== APPLE-STYLE SCROLL ANIMATIONS =====
+
+function initAppleScrollAnimations() {
+    const appleSections = document.querySelectorAll('.apple-section');
+    
+    if (!appleSections.length) return;
+    
+    // Intersection Observer for triggering animations
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                entry.target.classList.remove('exiting');
+            } else {
+                // Check if scrolling up or down
+                const rect = entry.boundingClientRect;
+                if (rect.top > 0) {
+                    // Section is below viewport - reset for re-entry
+                    entry.target.classList.remove('in-view');
+                } else {
+                    // Section is above viewport - add exiting class
+                    entry.target.classList.add('exiting');
+                }
+            }
+        });
+    }, {
+        threshold: [0.15, 0.5],
+        rootMargin: '-10% 0px -10% 0px'
+    });
+    
+    // Scroll-based scale effect
+    let ticking = false;
+    
+    function updateScrollScale() {
+        appleSections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            const sectionCenter = rect.top + rect.height / 2;
+            const viewportCenter = windowHeight / 2;
+            const distance = Math.abs(sectionCenter - viewportCenter);
+            const maxDistance = windowHeight;
+            
+            // Calculate scale based on distance from center (1 at center, 0.85 at edges)
+            const scale = Math.max(0.85, 1 - (distance / maxDistance) * 0.15);
+            
+            // Only apply scale when section is in viewport
+            if (rect.top < windowHeight && rect.bottom > 0) {
+                const content = section.querySelector('.apple-content');
+                if (content && section.classList.contains('in-view')) {
+                    content.style.setProperty('--dynamic-scale', scale);
+                }
+            }
+        });
+        ticking = false;
+    }
+    
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            requestAnimationFrame(updateScrollScale);
+            ticking = true;
+        }
+    }, { passive: true });
+    
+    // Observe all apple sections
+    appleSections.forEach(section => {
+        sectionObserver.observe(section);
+    });
+    
+    // Initial check
+    updateScrollScale();
+}
+
+// Initialize Apple scroll animations
+initAppleScrollAnimations();
+
 // ===== SCROLL PROGRESS INDICATOR =====
 
 const scrollProgress = document.getElementById('scroll-progress');
