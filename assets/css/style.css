@@ -333,6 +333,67 @@ html.light .text-ocean-400 {
     color: #cbd5e1;
 }
 
+/* ===== HORIZONTAL MARQUEE ANIMATION ===== */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Marquee wrapper - hide overflow */
+.marquee-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+}
+
+/* Marquee track - double content for seamless loop */
+.marquee-track {
+    display: flex;
+    gap: 1.5rem;
+    width: max-content;
+    animation: scroll-left 30s linear infinite;
+}
+
+.marquee-track-reverse {
+    animation: scroll-right 30s linear infinite;
+}
+
+/* Pause animation on hover */
+.marquee-wrapper:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+/* Marquee items */
+.marquee-track .cert-card,
+.marquee-track .project-card,
+.marquee-track .tool-card {
+    flex-shrink: 0;
+}
+
+/* Speed variants */
+.marquee-track.slow {
+    animation-duration: 45s;
+}
+
+.marquee-track.fast {
+    animation-duration: 20s;
+}
+
 /* ===== CERTIFICATIONS HORIZONTAL SCROLL ===== */
 .cert-scroll-track {
     scrollbar-width: thin;
@@ -359,7 +420,7 @@ html.light .text-ocean-400 {
 }
 
 .cert-card {
-    cursor: grab;
+    cursor: pointer;
 }
 
 .cert-card:active {

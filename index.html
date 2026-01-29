@@ -343,13 +343,13 @@
                 Courses and certifications I'm completing to build my technical foundation.
             </p>
             
-            <!-- Horizontal Scroll Container -->
-            <div class="cert-scroll-wrapper relative">
-                <!-- Scrollable Cards -->
-                <div class="cert-scroll-track flex gap-6 overflow-x-auto pb-4 scroll-smooth snap-x snap-mandatory px-4">
-                    
+            <!-- Horizontal Marquee Container -->
+            <div class="marquee-wrapper py-4">
+                <!-- Marquee Track - duplicated content for seamless loop -->
+                <div class="marquee-track">
+                    <!-- First set of cards -->
                     <!-- Cert Card 1: IT Fundamentals -->
-                    <div class="cert-card flex-shrink-0 w-80 bg-slate-900 border-2 border-green-500/50 rounded-xl p-6 snap-center hover:border-green-400 hover:shadow-[0_0_30px_rgba(34,197,94,0.3)] transition-all duration-300 group">
+                    <div class="cert-card w-80 bg-slate-900 border-2 border-green-500/50 rounded-xl p-6 hover:border-green-400 hover:shadow-[0_0_30px_rgba(34,197,94,0.3)] transition-all duration-300 group">
                         <div class="flex items-center justify-between mb-4">
                             <div class="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                                 <i class="fas fa-server text-2xl text-green-500"></i>
@@ -362,14 +362,13 @@
                             <i class="fab fa-udemy"></i>
                             <span>Udemy</span>
                         </div>
-                        <!-- Progress Bar -->
                         <div class="mt-4 h-2 bg-slate-800 rounded-full overflow-hidden">
                             <div class="h-full bg-gradient-to-r from-green-500 to-green-400 rounded-full" style="width: 100%"></div>
                         </div>
                     </div>
                     
                     <!-- Cert Card 2: Complete Python Mastery -->
-                    <div class="cert-card flex-shrink-0 w-80 bg-slate-900 border-2 border-ocean-500/50 rounded-xl p-6 snap-center hover:border-ocean-400 hover:shadow-[0_0_30px_rgba(14,165,233,0.3)] transition-all duration-300 group">
+                    <div class="cert-card w-80 bg-slate-900 border-2 border-ocean-500/50 rounded-xl p-6 hover:border-ocean-400 hover:shadow-[0_0_30px_rgba(14,165,233,0.3)] transition-all duration-300 group">
                         <div class="flex items-center justify-between mb-4">
                             <div class="w-14 h-14 bg-ocean-500/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                                 <i class="fab fa-python text-2xl text-ocean-500"></i>
@@ -382,14 +381,13 @@
                             <i class="fas fa-graduation-cap"></i>
                             <span>codewithMosh</span>
                         </div>
-                        <!-- Progress Bar -->
                         <div class="mt-4 h-2 bg-slate-800 rounded-full overflow-hidden">
                             <div class="h-full bg-gradient-to-r from-ocean-500 to-ocean-400 rounded-full" style="width: 65%"></div>
                         </div>
                     </div>
                     
                     <!-- Cert Card 3: Automate your life with Python -->
-                    <div class="cert-card flex-shrink-0 w-80 bg-slate-900 border-2 border-coral-500/50 rounded-xl p-6 snap-center hover:border-coral-400 hover:shadow-[0_0_30px_rgba(255,111,97,0.3)] transition-all duration-300 group">
+                    <div class="cert-card w-80 bg-slate-900 border-2 border-coral-500/50 rounded-xl p-6 hover:border-coral-400 hover:shadow-[0_0_30px_rgba(255,111,97,0.3)] transition-all duration-300 group">
                         <div class="flex items-center justify-between mb-4">
                             <div class="w-14 h-14 bg-coral-500/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                                 <i class="fas fa-robot text-2xl text-coral-500"></i>
@@ -402,19 +400,75 @@
                             <i class="fab fa-udemy"></i>
                             <span>Udemy</span>
                         </div>
-                        <!-- Progress Bar -->
                         <div class="mt-4 h-2 bg-slate-800 rounded-full overflow-hidden">
                             <div class="h-full bg-gradient-to-r from-coral-500 to-coral-400 rounded-full" style="width: 40%"></div>
                         </div>
                     </div>
                     
+                    <!-- Duplicate set for seamless loop -->
+                    <!-- Cert Card 1: IT Fundamentals (duplicate) -->
+                    <div class="cert-card w-80 bg-slate-900 border-2 border-green-500/50 rounded-xl p-6 hover:border-green-400 hover:shadow-[0_0_30px_rgba(34,197,94,0.3)] transition-all duration-300 group">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <i class="fas fa-server text-2xl text-green-500"></i>
+                            </div>
+                            <span class="text-xs bg-green-500/20 text-green-400 px-3 py-1 rounded-full font-bold">COMPLETED</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-100 mb-2">IT Fundamentals</h3>
+                        <p class="text-slate-400 text-sm mb-4">Technical Skills for Infrastructure</p>
+                        <div class="flex items-center gap-2 text-slate-500 text-xs">
+                            <i class="fab fa-udemy"></i>
+                            <span>Udemy</span>
+                        </div>
+                        <div class="mt-4 h-2 bg-slate-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-green-500 to-green-400 rounded-full" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Cert Card 2: Complete Python Mastery (duplicate) -->
+                    <div class="cert-card w-80 bg-slate-900 border-2 border-ocean-500/50 rounded-xl p-6 hover:border-ocean-400 hover:shadow-[0_0_30px_rgba(14,165,233,0.3)] transition-all duration-300 group">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-14 h-14 bg-ocean-500/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <i class="fab fa-python text-2xl text-ocean-500"></i>
+                            </div>
+                            <span class="text-xs bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full font-bold">65%</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-100 mb-2">Complete Python Mastery</h3>
+                        <p class="text-slate-400 text-sm mb-4">Comprehensive Python Programming</p>
+                        <div class="flex items-center gap-2 text-slate-500 text-xs">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>codewithMosh</span>
+                        </div>
+                        <div class="mt-4 h-2 bg-slate-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-ocean-500 to-ocean-400 rounded-full" style="width: 65%"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Cert Card 3: Automate your life with Python (duplicate) -->
+                    <div class="cert-card w-80 bg-slate-900 border-2 border-coral-500/50 rounded-xl p-6 hover:border-coral-400 hover:shadow-[0_0_30px_rgba(255,111,97,0.3)] transition-all duration-300 group">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-14 h-14 bg-coral-500/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <i class="fas fa-robot text-2xl text-coral-500"></i>
+                            </div>
+                            <span class="text-xs bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full font-bold">40%</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-100 mb-2">Automate your life with Python</h3>
+                        <p class="text-slate-400 text-sm mb-4">Practical Python Automation</p>
+                        <div class="flex items-center gap-2 text-slate-500 text-xs">
+                            <i class="fab fa-udemy"></i>
+                            <span>Udemy</span>
+                        </div>
+                        <div class="mt-4 h-2 bg-slate-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-coral-500 to-coral-400 rounded-full" style="width: 40%"></div>
+                        </div>
+                    </div>
                 </div>
-                
-                <!-- Scroll Hint -->
-                <div class="flex justify-center mt-6 gap-2 items-center text-slate-500 text-sm">
-                    <i class="fas fa-arrows-alt-h animate-pulse"></i>
-                    <span>Scroll to explore</span>
-                </div>
+            </div>
+            
+            <!-- Hover hint -->
+            <div class="flex justify-center mt-4 gap-2 items-center text-slate-500 text-sm">
+                <i class="fas fa-pause-circle"></i>
+                <span>Hover to pause</span>
             </div>
         </div>
     </section>
@@ -428,13 +482,13 @@
                 Practical Python automation projects focused on solving real-world problems and eliminating repetitive tasks.
             </p>
             
-            <!-- Horizontal Scroll Container -->
-            <div class="project-scroll-wrapper relative">
-                <!-- Scrollable Cards -->
-                <div class="project-scroll-track flex gap-6 overflow-x-auto pb-4 scroll-smooth snap-x snap-mandatory px-4">
-                
+            <!-- Horizontal Marquee Container -->
+            <div class="marquee-wrapper py-4">
+                <!-- Marquee Track - duplicated content for seamless loop -->
+                <div class="marquee-track slow">
+                    <!-- First set of cards -->
                     <!-- PROJECT 1: Job Scraper -->
-                    <div class="project-card flex-shrink-0 w-96 bg-slate-900 border border-slate-700 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-coral-500/20 hover:border-coral-500 transition-all snap-center group">
+                    <div class="project-card w-96 bg-slate-900 border border-slate-700 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-coral-500/20 hover:border-coral-500 transition-all group">
                     <div class="aspect-video bg-gradient-to-br from-coral-600 to-ocean-600 flex items-center justify-center overflow-hidden relative">
                         <img src="assets/images/Web Scraper - Job Listing.png" alt="Job Scraper Preview" class="w-full h-full object-cover">
                     </div>
@@ -489,7 +543,7 @@
                 </div>
                 
                     <!-- PROJECT 2: Image Automation -->
-                    <div class="project-card flex-shrink-0 w-96 bg-slate-900 border border-slate-700 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-ocean-500/20 hover:border-ocean-500 transition-all snap-center group">
+                    <div class="project-card w-96 bg-slate-900 border border-slate-700 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-ocean-500/20 hover:border-ocean-500 transition-all group">
                     <div class="aspect-video bg-gradient-to-br from-ocean-600 to-coral-600 flex items-center justify-center overflow-hidden relative">
                         <a href="https://github.com/ihsanhadhrami/Image_Automation_Tool-Python" target="_blank"> 
                             <img src="assets/images/Project card 2 img.png" alt="Image Automation Tool Preview" class="w-full h-full object-cover">
@@ -528,7 +582,7 @@
                 </div>
                 
                     <!-- PROJECT 3: Automated Business Reports -->
-                    <div class="project-card flex-shrink-0 w-96 bg-slate-900 border border-slate-700 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-coral-500/20 hover:border-coral-500 transition-all snap-center group">
+                    <div class="project-card w-96 bg-slate-900 border border-slate-700 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-coral-500/20 hover:border-coral-500 transition-all group">
                     <div class="aspect-video bg-gradient-to-br from-coral-600 to-ocean-600 flex items-center justify-center overflow-hidden relative">
                         <a href="https://github.com/ihsanhadhrami/ai-powered-business-reports" target="_blank" rel="noopener noreferrer"> 
                             <img src="assets/images/ai_powered_insights.png" alt="Business Reports Preview" class="w-full h-full object-cover">
@@ -566,13 +620,146 @@
                     </div>
                 </div>
                     
+                    <!-- Duplicate set for seamless loop -->
+                    <!-- PROJECT 1: Job Scraper (duplicate) -->
+                    <div class="project-card w-96 bg-slate-900 border border-slate-700 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-coral-500/20 hover:border-coral-500 transition-all group">
+                    <div class="aspect-video bg-gradient-to-br from-coral-600 to-ocean-600 flex items-center justify-center overflow-hidden relative">
+                        <img src="assets/images/Web Scraper - Job Listing.png" alt="Job Scraper Preview" class="w-full h-full object-cover">
+                    </div>
+                    
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-2xl font-bold text-slate-100">Job Listing Web Scraper</h3>
+                            <span class="text-xs bg-green-500/20 text-green-400 px-3 py-1 rounded-full font-semibold">Complete</span>
+                        </div>
+                        
+                        <p class="text-slate-400 mb-6 leading-relaxed">
+                            Python script that automates job listing collection from Indeed Malaysia. Features error handling, Excel export with timestamps, and packaged as a standalone executable for easy use.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-6 justify-center">
+                            <span class="text-xs bg-slate-800 border border-slate-700 text-slate-300 px-3 py-1 rounded-full font-medium">Python</span>
+                            <span class="text-xs bg-slate-800 border border-slate-700 text-slate-300 px-3 py-1 rounded-full font-medium">Selenium</span>
+                            <span class="text-xs bg-slate-800 border border-slate-700 text-slate-300 px-3 py-1 rounded-full font-medium">Pandas</span>
+                            <span class="text-xs bg-slate-800 border border-slate-700 text-slate-300 px-3 py-1 rounded-full font-medium">PyInstaller</span>
+                        </div>
+                        
+                        <div class="glass-button-container">
+                            <a href="https://github.com/ihsanhadhrami/web_scraping_python" target="_blank" rel="noopener noreferrer" class="glass-button coral">
+                                <div class="glass-radio-indicator">
+                                    <div class="glass-radio-ball"></div>
+                                </div>
+                                <div class="glass-button-content">
+                                    <i class="fab fa-github glass-button-icon"></i>
+                                    <span>View Code</span>
+                                </div>
+                            </a>
+                            <a href="assets/images/Job_listing_scrapped_demo.mp4" target="_blank" class="glass-button ocean">
+                                <div class="glass-radio-indicator">
+                                    <div class="glass-radio-ball"></div>
+                                </div>
+                                <div class="glass-button-content">
+                                    <i class="fas fa-video glass-button-icon"></i>
+                                    <span>View Demo</span>
+                                </div>
+                            </a>
+                            <a href="assets/Sample_Job_Listing_Python.xlsx" download class="glass-button slate">
+                                <div class="glass-radio-indicator">
+                                    <div class="glass-radio-ball"></div>
+                                </div>
+                                <div class="glass-button-content">
+                                    <i class="fas fa-file-excel glass-button-icon"></i>
+                                    <span>Sample Output</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 
-                <!-- Scroll Hint -->
-                <div class="flex justify-center mt-6 gap-2 items-center text-slate-500 text-sm">
-                    <i class="fas fa-arrows-alt-h animate-pulse"></i>
-                    <span>Scroll to explore</span>
+                    <!-- PROJECT 2: Image Automation (duplicate) -->
+                    <div class="project-card w-96 bg-slate-900 border border-slate-700 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-ocean-500/20 hover:border-ocean-500 transition-all group">
+                    <div class="aspect-video bg-gradient-to-br from-ocean-600 to-coral-600 flex items-center justify-center overflow-hidden relative">
+                        <a href="https://github.com/ihsanhadhrami/Image_Automation_Tool-Python" target="_blank"> 
+                            <img src="assets/images/Project card 2 img.png" alt="Image Automation Tool Preview" class="w-full h-full object-cover">
+                        </a>
+                    </div>
+                    
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-2xl font-bold text-slate-100">Batch Image Processing Tool</h3>
+                            <span class="text-xs bg-green-500/20 text-green-400 px-3 py-1 rounded-full font-semibold">Complete</span>
+                        </div>
+                        
+                        <p class="text-slate-400 mb-6 leading-relaxed">
+                            Batch image processing script that applies consistent enhancements (exposure, contrast, saturation, sharpness) to multiple images. Includes error handling and packaged as executable.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-slate-800 border border-slate-700 text-slate-300 px-3 py-1 rounded-full font-medium">Python</span>
+                            <span class="text-xs bg-slate-800 border border-slate-700 text-slate-300 px-3 py-1 rounded-full font-medium">Pillow</span>
+                            <span class="text-xs bg-slate-800 border border-slate-700 text-slate-300 px-3 py-1 rounded-full font-medium">NumPy</span>
+                            <span class="text-xs bg-slate-800 border border-slate-700 text-slate-300 px-3 py-1 rounded-full font-medium">PyInstaller</span>
+                        </div>
+                        
+                        <div class="glass-button-container">
+                            <a href="https://github.com/ihsanhadhrami/Image_Automation_Tool-Python" target="_blank" rel="noopener noreferrer" class="glass-button ocean">
+                                <div class="glass-radio-indicator">
+                                    <div class="glass-radio-ball"></div>
+                                </div>
+                                <div class="glass-button-content">
+                                    <i class="fab fa-github glass-button-icon"></i>
+                                    <span>View Code</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
+                
+                    <!-- PROJECT 3: Automated Business Reports (duplicate) -->
+                    <div class="project-card w-96 bg-slate-900 border border-slate-700 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-coral-500/20 hover:border-coral-500 transition-all group">
+                    <div class="aspect-video bg-gradient-to-br from-coral-600 to-ocean-600 flex items-center justify-center overflow-hidden relative">
+                        <a href="https://github.com/ihsanhadhrami/ai-powered-business-reports" target="_blank" rel="noopener noreferrer"> 
+                            <img src="assets/images/ai_powered_insights.png" alt="Business Reports Preview" class="w-full h-full object-cover">
+                        </a>
+                    </div>
+                    
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-2xl font-bold text-slate-100">Automated Business Reports</h3>
+                            <span class="text-xs bg-green-500/20 text-green-400 px-3 py-1 rounded-full font-semibold">Complete</span>
+                        </div>
+                        
+                        <p class="text-slate-400 mb-6 leading-relaxed">
+                            Automated reporting script that processes business data, calculates metrics, generates HTML reports, and sends emails. Features retry mechanisms and structured output.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-slate-800 border border-slate-700 text-slate-300 px-3 py-1 rounded-full font-medium">Python</span>
+                            <span class="text-xs bg-slate-800 border border-slate-700 text-slate-300 px-3 py-1 rounded-full font-medium">Pandas</span>
+                            <span class="text-xs bg-slate-800 border border-slate-700 text-slate-300 px-3 py-1 rounded-full font-medium">Plotly</span>
+                            <span class="text-xs bg-slate-800 border border-slate-700 text-slate-300 px-3 py-1 rounded-full font-medium">SMTP</span>
+                        </div>
+                        
+                        <div class="glass-button-container">
+                            <a href="https://github.com/ihsanhadhrami/ai-powered-business-reports" target="_blank" rel="noopener noreferrer" class="glass-button coral">
+                                <div class="glass-radio-indicator">
+                                    <div class="glass-radio-ball"></div>
+                                </div>
+                                <div class="glass-button-content">
+                                    <i class="fab fa-github glass-button-icon"></i>
+                                    <span>View Code</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <!-- Hover hint -->
+            <div class="flex justify-center mt-4 gap-2 items-center text-slate-500 text-sm">
+                <i class="fas fa-pause-circle"></i>
+                <span>Hover to pause</span>
             </div>
         </div>
     </section>
@@ -586,12 +773,13 @@
                 Technologies and tools I use to build automation solutions and reliable software.
             </p>
             
-            <!-- Horizontal Scroll Container -->
-            <div class="tools-scroll-wrapper relative">
-                <!-- Scrollable Cards -->
-                <div class="tools-scroll-track flex gap-6 overflow-x-auto pb-4 scroll-smooth snap-x snap-mandatory px-4">
+            <!-- Horizontal Marquee Container -->
+            <div class="marquee-wrapper py-4">
+                <!-- Marquee Track - scrolling in reverse direction for variety -->
+                <div class="marquee-track marquee-track-reverse fast">
+                    <!-- First set of cards -->
                     <!-- Python -->
-                    <div class="tool-card flex-shrink-0 w-48 bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-coral-500 hover:shadow-[0_0_30px_rgba(255,111,97,0.2)] transition-all snap-center group">
+                    <div class="tool-card w-48 bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-coral-500 hover:shadow-[0_0_30px_rgba(255,111,97,0.2)] transition-all group">
                     <div class="text-4xl text-coral-500 mb-3">
                         <i class="fab fa-python"></i>
                     </div>
@@ -600,7 +788,7 @@
                 </div>
                 
                     <!-- Excel -->
-                    <div class="tool-card flex-shrink-0 w-48 bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-coral-500 hover:shadow-[0_0_30px_rgba(255,111,97,0.2)] transition-all snap-center group">
+                    <div class="tool-card w-48 bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-coral-500 hover:shadow-[0_0_30px_rgba(255,111,97,0.2)] transition-all group">
                     <div class="text-4xl text-green-500 mb-3">
                         <i class="fas fa-file-excel"></i>
                     </div>
@@ -609,7 +797,7 @@
                 </div>
                 
                     <!-- Git -->
-                    <div class="tool-card flex-shrink-0 w-48 bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-coral-500 hover:shadow-[0_0_30px_rgba(255,111,97,0.2)] transition-all snap-center group">
+                    <div class="tool-card w-48 bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-coral-500 hover:shadow-[0_0_30px_rgba(255,111,97,0.2)] transition-all group">
                     <div class="text-4xl text-orange-500 mb-3">
                         <i class="fab fa-git-alt"></i>
                     </div>
@@ -618,7 +806,7 @@
                 </div>
                 
                     <!-- VS Code -->
-                    <div class="tool-card flex-shrink-0 w-48 bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-coral-500 hover:shadow-[0_0_30px_rgba(255,111,97,0.2)] transition-all snap-center group">
+                    <div class="tool-card w-48 bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-coral-500 hover:shadow-[0_0_30px_rgba(255,111,97,0.2)] transition-all group">
                     <div class="text-4xl text-blue-500 mb-3">
                         <i class="fas fa-code"></i>
                     </div>
@@ -627,7 +815,7 @@
                 </div>
                 
                     <!-- Windows -->
-                    <div class="tool-card flex-shrink-0 w-48 bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-ocean-500 hover:shadow-[0_0_30px_rgba(14,165,233,0.2)] transition-all snap-center group">
+                    <div class="tool-card w-48 bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-ocean-500 hover:shadow-[0_0_30px_rgba(14,165,233,0.2)] transition-all group">
                     <div class="text-4xl text-ocean-500 mb-3">
                         <i class="fab fa-windows"></i>
                     </div>
@@ -636,7 +824,7 @@
                 </div>
                 
                     <!-- Selenium -->
-                    <div class="tool-card flex-shrink-0 w-48 bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-ocean-500 hover:shadow-[0_0_30px_rgba(14,165,233,0.2)] transition-all snap-center group">
+                    <div class="tool-card w-48 bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-ocean-500 hover:shadow-[0_0_30px_rgba(14,165,233,0.2)] transition-all group">
                     <div class="text-4xl text-ocean-500 mb-3">
                         <i class="fas fa-robot"></i>
                     </div>
@@ -645,7 +833,7 @@
                 </div>
                 
                     <!-- Pandas -->
-                    <div class="tool-card flex-shrink-0 w-48 bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-ocean-500 hover:shadow-[0_0_30px_rgba(14,165,233,0.2)] transition-all snap-center group">
+                    <div class="tool-card w-48 bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-ocean-500 hover:shadow-[0_0_30px_rgba(14,165,233,0.2)] transition-all group">
                     <div class="text-4xl text-ocean-500 mb-3">
                         <i class="fas fa-table"></i>
                     </div>
@@ -654,7 +842,7 @@
                 </div>
                 
                     <!-- HTML/CSS -->
-                    <div class="tool-card flex-shrink-0 w-48 bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-ocean-500 hover:shadow-[0_0_30px_rgba(14,165,233,0.2)] transition-all snap-center group">
+                    <div class="tool-card w-48 bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-ocean-500 hover:shadow-[0_0_30px_rgba(14,165,233,0.2)] transition-all group">
                     <div class="text-4xl text-orange-400 mb-3">
                         <i class="fab fa-html5"></i>
                     </div>
@@ -662,13 +850,85 @@
                         <p class="text-slate-500 text-xs mt-1">Basic Web</p>
                     </div>
                     
+                    <!-- Duplicate set for seamless loop -->
+                    <!-- Python (duplicate) -->
+                    <div class="tool-card w-48 bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-coral-500 hover:shadow-[0_0_30px_rgba(255,111,97,0.2)] transition-all group">
+                    <div class="text-4xl text-coral-500 mb-3">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h4 class="font-semibold text-slate-100">Python</h4>
+                    <p class="text-slate-500 text-xs mt-1">Scripting & Automation</p>
                 </div>
                 
-                <!-- Scroll Hint -->
-                <div class="flex justify-center mt-6 gap-2 items-center text-slate-500 text-sm">
-                    <i class="fas fa-arrows-alt-h animate-pulse"></i>
-                    <span>Scroll to explore</span>
+                    <!-- Excel (duplicate) -->
+                    <div class="tool-card w-48 bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-coral-500 hover:shadow-[0_0_30px_rgba(255,111,97,0.2)] transition-all group">
+                    <div class="text-4xl text-green-500 mb-3">
+                        <i class="fas fa-file-excel"></i>
+                    </div>
+                    <h4 class="font-semibold text-slate-100">Excel / CSV</h4>
+                    <p class="text-slate-500 text-xs mt-1">Data Handling</p>
                 </div>
+                
+                    <!-- Git (duplicate) -->
+                    <div class="tool-card w-48 bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-coral-500 hover:shadow-[0_0_30px_rgba(255,111,97,0.2)] transition-all group">
+                    <div class="text-4xl text-orange-500 mb-3">
+                        <i class="fab fa-git-alt"></i>
+                    </div>
+                    <h4 class="font-semibold text-slate-100">Git</h4>
+                    <p class="text-slate-500 text-xs mt-1">Version Control</p>
+                </div>
+                
+                    <!-- VS Code (duplicate) -->
+                    <div class="tool-card w-48 bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-coral-500 hover:shadow-[0_0_30px_rgba(255,111,97,0.2)] transition-all group">
+                    <div class="text-4xl text-blue-500 mb-3">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h4 class="font-semibold text-slate-100">VS Code</h4>
+                    <p class="text-slate-500 text-xs mt-1">Development</p>
+                </div>
+                
+                    <!-- Windows (duplicate) -->
+                    <div class="tool-card w-48 bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-ocean-500 hover:shadow-[0_0_30px_rgba(14,165,233,0.2)] transition-all group">
+                    <div class="text-4xl text-ocean-500 mb-3">
+                        <i class="fab fa-windows"></i>
+                    </div>
+                    <h4 class="font-semibold text-slate-100">Windows</h4>
+                    <p class="text-slate-500 text-xs mt-1">OS Fundamentals</p>
+                </div>
+                
+                    <!-- Selenium (duplicate) -->
+                    <div class="tool-card w-48 bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-ocean-500 hover:shadow-[0_0_30px_rgba(14,165,233,0.2)] transition-all group">
+                    <div class="text-4xl text-ocean-500 mb-3">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h4 class="font-semibold text-slate-100">Selenium</h4>
+                    <p class="text-slate-500 text-xs mt-1">Web Automation</p>
+                </div>
+                
+                    <!-- Pandas (duplicate) -->
+                    <div class="tool-card w-48 bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-ocean-500 hover:shadow-[0_0_30px_rgba(14,165,233,0.2)] transition-all group">
+                    <div class="text-4xl text-ocean-500 mb-3">
+                        <i class="fas fa-table"></i>
+                    </div>
+                    <h4 class="font-semibold text-slate-100">Pandas</h4>
+                    <p class="text-slate-500 text-xs mt-1">Data Processing</p>
+                </div>
+                
+                    <!-- HTML/CSS (duplicate) -->
+                    <div class="tool-card w-48 bg-slate-800 border border-slate-700 p-6 rounded-xl text-center hover:border-ocean-500 hover:shadow-[0_0_30px_rgba(14,165,233,0.2)] transition-all group">
+                    <div class="text-4xl text-orange-400 mb-3">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                        <h4 class="font-semibold text-slate-100">HTML/CSS</h4>
+                        <p class="text-slate-500 text-xs mt-1">Basic Web</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hover hint -->
+            <div class="flex justify-center mt-4 gap-2 items-center text-slate-500 text-sm">
+                <i class="fas fa-pause-circle"></i>
+                <span>Hover to pause</span>
             </div>
         </div>
     </section>
