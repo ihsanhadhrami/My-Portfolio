@@ -382,6 +382,43 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
+// ===== MARQUEE TOUCH INTERACTION FOR MOBILE =====
+
+function enableMarqueeTouchInteraction() {
+    const marqueeWrappers = document.querySelectorAll('.marquee-wrapper');
+    
+    marqueeWrappers.forEach(wrapper => {
+        let touchTimeout;
+        
+        // Touch start - pause animation
+        wrapper.addEventListener('touchstart', (e) => {
+            wrapper.classList.add('touch-active');
+            // Clear any existing timeout
+            if (touchTimeout) {
+                clearTimeout(touchTimeout);
+            }
+        }, { passive: true });
+        
+        // Touch end - resume animation after delay
+        wrapper.addEventListener('touchend', () => {
+            // Resume animation after 2 seconds of no interaction
+            touchTimeout = setTimeout(() => {
+                wrapper.classList.remove('touch-active');
+            }, 2000);
+        }, { passive: true });
+        
+        // Touch move - keep paused while swiping
+        wrapper.addEventListener('touchmove', () => {
+            if (touchTimeout) {
+                clearTimeout(touchTimeout);
+            }
+        }, { passive: true });
+    });
+}
+
+// Initialize marquee touch interactions
+enableMarqueeTouchInteraction();
+
 // ===== HORIZONTAL SCROLL DRAG FUNCTIONALITY =====
 
 function enableDragScroll(containerSelector) {
@@ -424,13 +461,13 @@ function enableDragScroll(containerSelector) {
         container.addEventListener('touchstart', (e) => {
             touchStartX = e.touches[0].pageX - container.offsetLeft;
             touchScrollLeft = container.scrollLeft;
-        });
+        }, { passive: true });
         
         container.addEventListener('touchmove', (e) => {
             const x = e.touches[0].pageX - container.offsetLeft;
             const walk = (x - touchStartX) * 2;
             container.scrollLeft = touchScrollLeft - walk;
-        });
+        }, { passive: true });
     });
 }
 
@@ -438,4 +475,5 @@ function enableDragScroll(containerSelector) {
 enableDragScroll('.cert-scroll-track');
 enableDragScroll('.project-scroll-track');
 enableDragScroll('.tools-scroll-track');
+enableDragScroll('.marquee-wrapper');
 

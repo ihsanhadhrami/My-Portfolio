@@ -267,6 +267,37 @@ textarea:focus {
     .flex-wrap {
         gap: 0.75rem;
     }
+    
+    /* Ensure focus area cards are fully visible */
+    .apple-cards-grid {
+        gap: 1.5rem;
+    }
+}
+
+/* Tablet specific styles */
+@media (min-width: 641px) and (max-width: 1024px) {
+    /* Adjust card sizing for tablets */
+    .marquee-track .cert-card {
+        width: 300px;
+    }
+    
+    .marquee-track .project-card {
+        width: 360px;
+    }
+    
+    .marquee-track .tool-card {
+        width: 170px;
+    }
+    
+    /* Ensure apple section cards have proper spacing */
+    .apple-cards-grid {
+        gap: 1.5rem;
+    }
+    
+    /* Improve touch targets on tablets */
+    .glass-button {
+        padding: 1.25rem 1.75rem;
+    }
 }
 
 /* Smooth section transitions */
@@ -397,6 +428,52 @@ html.light .text-ocean-400 {
     transition: transform 0.5s ease-in, opacity 0.5s ease-in;
 }
 
+/* Mobile/Tablet optimizations for apple sections */
+@media (max-width: 768px) {
+    .apple-content {
+        transform: scale(0.9);
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease-out;
+    }
+    
+    .apple-title {
+        transform: translateY(25px);
+    }
+    
+    .apple-card {
+        transform: translateY(40px) scale(0.97);
+    }
+    
+    .apple-cards-grid > div {
+        transform: translateY(40px) scale(0.95);
+    }
+    
+    /* Reduce motion for better mobile performance */
+    .apple-section.exiting .apple-content {
+        transform: scale(0.95) translateY(-15px);
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .apple-content {
+        transform: scale(0.92);
+    }
+    
+    .apple-section.in-view .apple-content {
+        transform: scale(1);
+    }
+    
+    /* Faster animations for touch devices */
+    .apple-content,
+    .apple-title,
+    .apple-divider,
+    .apple-subtitle,
+    .apple-card,
+    .apple-cards-grid > div {
+        transition-duration: 0.5s;
+    }
+}
+
 /* ===== ABOUT SECTION GLOW EFFECTS ===== */
 .about-glow-card {
     animation: subtle-glow 3s ease-in-out infinite alternate;
@@ -486,6 +563,71 @@ html.light .text-ocean-400 {
 
 .marquee-track.fast {
     animation-duration: 20s;
+}
+
+/* Touch interaction for mobile - pause on touch */
+.marquee-wrapper.touch-active .marquee-track {
+    animation-play-state: paused;
+}
+
+/* Responsive card sizing for marquee items */
+@media (max-width: 640px) {
+    .marquee-track .cert-card {
+        width: 280px;
+        padding: 1rem;
+    }
+    
+    .marquee-track .project-card {
+        width: 320px;
+    }
+    
+    .marquee-track .tool-card {
+        width: 140px;
+        padding: 1rem;
+    }
+    
+    .marquee-track .tool-card .text-4xl {
+        font-size: 1.75rem;
+    }
+    
+    .marquee-track .project-card .p-8 {
+        padding: 1.25rem;
+    }
+    
+    .marquee-track .project-card h3 {
+        font-size: 1.25rem;
+    }
+    
+    .marquee-track .project-card p {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .marquee-track .cert-card {
+        width: 300px;
+    }
+    
+    .marquee-track .project-card {
+        width: 340px;
+    }
+    
+    .marquee-track .tool-card {
+        width: 160px;
+    }
+    
+    /* Slower animation on mobile for easier reading */
+    .marquee-track {
+        animation-duration: 40s;
+    }
+    
+    .marquee-track.slow {
+        animation-duration: 60s;
+    }
+    
+    .marquee-track.fast {
+        animation-duration: 30s;
+    }
 }
 
 /* ===== CERTIFICATIONS HORIZONTAL SCROLL ===== */
@@ -585,6 +727,25 @@ html.light .text-ocean-400 {
 
 .tool-card:active {
     cursor: grabbing;
+}
+
+/* Interaction hint visibility based on device */
+.hover-hint-desktop {
+    display: flex;
+}
+
+.hover-hint-mobile {
+    display: none;
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .hover-hint-desktop {
+        display: none;
+    }
+    
+    .hover-hint-mobile {
+        display: flex;
+    }
 }
 
 /* ===== GLASSMORPHISM BUTTON STYLES ===== */
