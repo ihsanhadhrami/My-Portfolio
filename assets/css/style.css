@@ -663,6 +663,52 @@ html.light .text-ocean-400 {
     cursor: grabbing;
 }
 
+/* ===== CERTIFICATE IMAGE CARD ===== */
+.cert-image-card {
+    padding: 0;
+}
+
+.cert-image-card .cert-image {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+/* ===== CERTIFICATE LIGHTBOX MODAL ===== */
+#cert-modal.active {
+    display: flex;
+}
+
+#cert-modal .cert-modal-img {
+    animation: certModalIn 0.3s ease-out;
+}
+
+@keyframes certModalIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 640px) {
+    .cert-image-card .cert-image {
+        height: 10rem;
+    }
+
+    #cert-modal .cert-modal-img {
+        border-radius: 0.5rem;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    .cert-image-card .cert-image {
+        height: 11rem;
+    }
+}
+
 /* ===== PROJECTS HORIZONTAL SCROLL ===== */
 .project-scroll-track {
     scrollbar-width: thin;

@@ -477,3 +477,30 @@ enableDragScroll('.project-scroll-track');
 enableDragScroll('.tools-scroll-track');
 enableDragScroll('.marquee-wrapper');
 
+// ===== CERTIFICATE LIGHTBOX MODAL =====
+
+function openCertModal() {
+    const modal = document.getElementById('cert-modal');
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeCertModal(event, forceClose) {
+    if (forceClose || event.target === event.currentTarget || event.target.closest('.absolute.inset-0')) {
+        const modal = document.getElementById('cert-modal');
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+
+// Close modal on Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        const modal = document.getElementById('cert-modal');
+        if (modal.classList.contains('active')) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    }
+});
+
