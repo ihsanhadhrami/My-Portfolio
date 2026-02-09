@@ -673,39 +673,32 @@ html.light .text-ocean-400 {
     image-rendering: crisp-edges;
 }
 
-/* ===== CERTIFICATE LIGHTBOX MODAL ===== */
-#cert-modal.active {
-    display: flex;
+.cert-image-card {
+    text-decoration: none;
+    color: inherit;
 }
 
-#cert-modal .cert-modal-img {
-    animation: certModalIn 0.3s ease-out;
-}
-
-@keyframes certModalIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+.cert-image-card:hover {
+    text-decoration: none;
 }
 
 @media (max-width: 640px) {
-    .cert-image-card .cert-image {
-        height: 10rem;
+    .cert-image-card {
+        width: 320px;
     }
 
-    #cert-modal .cert-modal-img {
-        border-radius: 0.5rem;
+    .cert-image-card .cert-image {
+        height: 12rem;
     }
 }
 
 @media (min-width: 641px) and (max-width: 1024px) {
+    .cert-image-card {
+        width: 360px;
+    }
+
     .cert-image-card .cert-image {
-        height: 11rem;
+        height: 14rem;
     }
 }
 
