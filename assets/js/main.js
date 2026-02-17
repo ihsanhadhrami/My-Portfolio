@@ -158,14 +158,14 @@ const projects = [
 ];
 
 // Initialize project links (update the href attributes in your HTML with actual URLs)
-document.querySelectorAll('.fa-github').forEach((link, index) => {
+document.querySelectorAll('#projects .fa-github').forEach((link, index) => {
     const parent = link.closest('a');
     if (parent && projects[index]) {
         parent.href = projects[index].github;
     }
 });
 
-document.querySelectorAll('.fa-external-link-alt').forEach((link, index) => {
+document.querySelectorAll('#projects .fa-external-link-alt').forEach((link, index) => {
     const parent = link.closest('a');
     if (parent && projects[index]) {
         parent.href = projects[index].demo;
